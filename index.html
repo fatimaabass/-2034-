@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Cup 2034 Saudi Arabia Guide</title>
+    <meta name="description" content="Comprehensive guide for visitors to World Cup 2034 in Saudi Arabia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="rtl.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-image">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <circle cx="50" cy="50" r="45" fill="#006c35"/>
+                        <polygon points="50,20 60,40 85,40 65,55 75,80 50,65 25,80 35,55 15,40 40,40" fill="#fff"/>
+                    </svg>
+                </div>
+                <h1><span class="title-ar" lang="ar">دليل كأس العالم 2034</span><span class="title-en">World Cup 2034 Guide</span></h1>
+            </div>
+            <nav id="main-nav">
+                <button id="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul>
+                    <li><a href="index.html" class="active"><span class="en">Home</span><span class="ar">الرئيسية</span></a></li>
+                    <li><a href="stadiums.html"><span class="en">Stadiums</span><span class="ar">الملاعب</span></a></li>
+                    <li><a href="matches.html"><span class="en">Matches</span><span class="ar">المباريات</span></a></li>
+                    <li><a href="tourism.html"><span class="en">Tourism</span><span class="ar">السياحة</span></a></li>
+                    <li><a href="emergency.html"><span class="en">Emergency</span><span class="ar">الطوارئ</span></a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <button id="language-toggle" data-current-lang="en">
+                    <span class="en">العربية</span>
+                    <span class="ar">English</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>
+                    <span class="en">Welcome to Saudi Arabia World Cup 2034</span>
+                    <span class="ar">مرحباً بكم في كأس العالم 2034 في المملكة العربية السعودية</span>
+                </h2>
+                <p>
+                    <span class="en">Your comprehensive guide to stadiums, matches, tourism, and emergency information during your World Cup visit.</span>
+                    <span class="ar">دليلك الشامل للملاعب والمباريات والسياحة ومعلومات الطوارئ خلال زيارتك لكأس العالم.</span>
+                </p>
+                <div class="hero-buttons">
+                    <a href="stadiums.html" class="btn primary">
+                        <span class="en">View Stadiums</span>
+                        <span class="ar">عرض الملاعب</span>
+                    </a>
+                    <a href="matches.html" class="btn secondary">
+                        <span class="en">Match Schedule</span>
+                        <span class="ar">جدول المباريات</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quick-access">
+        <div class="container">
+            <h2>
+                <span class="en">Quick Access</span>
+                <span class="ar">وصول سريع</span>
+            </h2>
+            <div class="quick-access-grid">
+                <a href="stadiums.html" class="quick-access-item">
+                    <div class="icon"><i class="fas fa-futbol"></i></div>
+                    <h3>
+                        <span class="en">Stadium Guide</span>
+                        <span class="ar">دليل الملاعب</span>
+                    </h3>
+                    <p>
+                        <span class="en">Explore all 10 stadiums with maps and information</span>
+                        <span class="ar">استكشف جميع الملاعب العشرة مع الخرائط والمعلومات</span>
+                    </p>
+                </a>
+                <a href="matches.html" class="quick-access-item">
+                    <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>
+                        <span class="en">Match Schedule</span>
+                        <span class="ar">جدول المباريات</span>
+                    </h3>
+                    <p>
+                        <span class="en">Find all match times and locations</span>
+                        <span class="ar">ابحث عن جميع أوقات المباريات ومواقعها</span>
+                    </p>
+                </a>
+                <a href="tourism.html" class="quick-access-item">
+                    <div class="icon"><i class="fas fa-umbrella-beach"></i></div>
+                    <h3>
+                        <span class="en">Tourism & Entertainment</span>
+                        <span class="ar">السياحة والترفيه</span>
+                    </h3>
+                    <p>
+                        <span class="en">Discover local attractions and experiences</span>
+                        <span class="ar">اكتشف المعالم السياحية والتجارب المحلية</span>
+                    </p>
+                </a>
+                <a href="emergency.html" class="quick-access-item">
+                    <div class="icon"><i class="fas fa-first-aid"></i></div>
+                    <h3>
+                        <span class="en">Emergency Information</span>
+                        <span class="ar">معلومات الطوارئ</span>
+                    </h3>
+                    <p>
+                        <span class="en">Important contacts and safety information</span>
+                        <span class="ar">جهات الاتصال المهمة ومعلومات السلامة</span>
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured-stadiums">
+        <div class="container">
+            <h2>
+                <span class="en">Featured Stadiums</span>
+                <span class="ar">الملاعب المميزة</span>
+            </h2>
+            <div class="stadium-cards">
+                <div class="stadium-card">
+                    <div class="stadium-image">
+                        <img src="استاد الملك سلمان الدولي.jpg" alt="King Salman International Stadium">
+                    </div>
+                    <div class="stadium-info">
+                        <h3>
+                            <span class="en">King Salman International Stadium</span>
+                            <span class="ar">استاد الملك سلمان الدولي</span>
+                        </h3>
+                        <p>
+                            <span class="en">Capacity: 92,000+ spectators</span>
+                            <span class="ar">السعة: أكثر من 92,000 متفرج</span>
+                        </p>
+                        <a href="stadiums.html#king-salman" class="btn small">
+                            <span class="en">Details</span>
+                            <span class="ar">التفاصيل</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="stadium-card">
+                    <div class="stadium-image">
+                        <img src="https://pixabay.com/get/g5cb35c4520a62ae2019436fcf0db7721db5e7d5a8a5bcdd18a5a366f64a9d7b3813ca29834346faa9d45842de894ca89d9c6a4f6bc52fdcabc9d5f68e4e87a99_1280.jpg" alt="King Abdullah Sports City">
+                    </div>
+                    <div class="stadium-info">
+                        <h3>
+                            <span class="en">King Abdullah Sports City</span>
+                            <span class="ar">مدينة الملك عبدالله الرياضية</span>
+                        </h3>
+                        <p>
+                            <span class="en">Capacity: 58,432 spectators</span>
+                            <span class="ar">السعة: 58,432 متفرج</span>
+                        </p>
+                        <a href="stadiums.html#king-abdullah" class="btn small">
+                            <span class="en">Details</span>
+                            <span class="ar">التفاصيل</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="stadium-card">
+                    <div class="stadium-image">
+                        <img src="استاد الملك فهد الدولي.jpg" alt="King Fahd International Stadium">
+                    </div>
+                    <div class="stadium-info">
+                        <h3>
+                            <span class="en">King Fahd International Stadium</span>
+                            <span class="ar">استاد الملك فهد الدولي</span>
+                        </h3>
+                        <p>
+                            <span class="en">Capacity: 70,000+ spectators</span>
+                            <span class="ar">السعة: أكثر من 70,000 متفرج</span>
+                        </p>
+                        <a href="stadiums.html#king-fahd" class="btn small">
+                            <span class="en">Details</span>
+                            <span class="ar">التفاصيل</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-button">
+                <a href="stadiums.html" class="btn outline">
+                    <span class="en">View All Stadiums</span>
+                    <span class="ar">عرض جميع الملاعب</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="map-preview">
+        <div class="container">
+            <h2>
+                <span class="en">Interactive Map</span>
+                <span class="ar">الخريطة التفاعلية</span>
+            </h2>
+            <p>
+                <span class="en">Explore stadiums, hotels, restaurants, and attractions across Saudi Arabia</span>
+                <span class="ar">استكشف الملاعب والفنادق والمطاعم والمعالم السياحية في جميع أنحاء المملكة العربية السعودية</span>
+            </p>
+            <div id="preview-map"></div>
+            <div class="map-overlay">
+                <a href="stadiums.html#map" class="btn primary">
+                    <span class="en">View Full Map</span>
+                    <span class="ar">عرض الخريطة الكاملة</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="local-cuisine">
+        <div class="container">
+            <h2>
+                <span class="en">Taste of Saudi Arabia</span>
+                <span class="ar">مذاق المملكة العربية السعودية</span>
+            </h2>
+            <p class="section-desc">
+                <span class="en">Experience authentic Saudi cuisine during your visit</span>
+                <span class="ar">جرب المأكولات السعودية الأصيلة خلال زيارتك</span>
+            </p>
+            <div class="cuisine-grid">
+                <div class="cuisine-item">
+                    <img src="Kabsa.jpg" alt="Traditional Saudi dish">
+                    <h3>
+                        <span class="en">Kabsa</span>
+                        <span class="ar">كبسة</span>
+                    </h3>
+                    <p>
+                        <span class="en">The national dish of Saudi Arabia featuring spiced rice with meat</span>
+                        <span class="ar">الطبق الوطني للمملكة العربية السعودية يتضمن الأرز المتبل مع اللحم</span>
+                    </p>
+                </div>
+                <div class="cuisine-item">
+                    <img src="Mandi.jpg" alt="Traditional Middle Eastern food">
+                    <h3>
+                        <span class="en">Mandi</span>
+                        <span class="ar">مندي</span>
+                    </h3>
+                    <p>
+                        <span class="en">A traditional dish of rice and meat cooked in a special way</span>
+                        <span class="ar">طبق تقليدي من الأرز واللحم مطبوخ بطريقة خاصة</span>
+                    </p>
+                </div>
+                <div class="cuisine-item">
+                    <img src="Mutabbaq.jpg" alt="Arabic bread">
+                    <h3>
+                        <span class="en">Mutabbaq</span>
+                        <span class="ar">مطبق</span>
+                    </h3>
+                    <p>
+                        <span class="en">Stuffed bread with various fillings including meat and vegetables</span>
+                        <span class="ar">خبز محشو بمكونات مختلفة بما في ذلك اللحوم والخضروات</span>
+                    </p>
+                </div>
+                <div class="cuisine-item">
+                    <img src="Saudi Coffee & Dates.jpg" alt="Saudi coffee">
+                    <h3>
+                        <span class="en">Saudi Coffee</span>
+                        <span class="ar">القهوة السعودية</span>
+                    </h3>
+                    <p>
+                        <span class="en">Traditional Arabic coffee served with dates</span>
+                        <span class="ar">القهوة العربية التقليدية تقدم مع التمر</span>
+                    </p>
+                </div>
+            </div>
+            <div class="learn-more">
+                <a href="tourism.html#local-cuisine" class="btn outline">
+                    <span class="en">Discover More Foods</span>
+                    <span class="ar">اكتشف المزيد من الأطعمة</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="countdown">
+        <div class="container">
+            <h2>
+                <span class="en">Countdown to World Cup 2034</span>
+                <span class="ar">العد التنازلي لكأس العالم 2034</span>
+            </h2>
+            <div class="countdown-timer">
+                <div class="time-unit">
+                    <span id="days">000</span>
+                    <span class="label">
+                        <span class="en">Days</span>
+                        <span class="ar">أيام</span>
+                    </span>
+                </div>
+                <div class="time-unit">
+                    <span id="hours">00</span>
+                    <span class="label">
+                        <span class="en">Hours</span>
+                        <span class="ar">ساعات</span>
+                    </span>
+                </div>
+                <div class="time-unit">
+                    <span id="minutes">00</span>
+                    <span class="label">
+                        <span class="en">Minutes</span>
+                        <span class="ar">دقائق</span>
+                    </span>
+                </div>
+                <div class="time-unit">
+                    <span id="seconds">00</span>
+                    <span class="label">
+                        <span class="en">Seconds</span>
+                        <span class="ar">ثواني</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg viewBox="0 0 100 100" class="footer-logo-svg">
+                        <circle cx="50" cy="50" r="45" fill="#006c35"/>
+                        <polygon points="50,20 60,40 85,40 65,55 75,80 50,65 25,80 35,55 15,40 40,40" fill="#fff"/>
+                    </svg>
+                    <h3>
+                        <span class="en">World Cup 2034 Saudi Arabia</span>
+                        <span class="ar">كأس العالم 2034 المملكة العربية السعودية</span>
+                    </h3>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Guide</span>
+                            <span class="ar">الدليل</span>
+                        </h4>
+                        <ul>
+                            <li><a href="stadiums.html">
+                                <span class="en">Stadiums</span>
+                                <span class="ar">الملاعب</span>
+                            </a></li>
+                            <li><a href="matches.html">
+                                <span class="en">Matches</span>
+                                <span class="ar">المباريات</span>
+                            </a></li>
+                            <li><a href="tourism.html">
+                                <span class="en">Tourism</span>
+                                <span class="ar">السياحة</span>
+                            </a></li>
+                            <li><a href="emergency.html">
+                                <span class="en">Emergency</span>
+                                <span class="ar">الطوارئ</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Cities</span>
+                            <span class="ar">المدن</span>
+                        </h4>
+                        <ul>
+                            <li><a href="tourism.html#riyadh">
+                                <span class="en">Riyadh</span>
+                                <span class="ar">الرياض</span>
+                            </a></li>
+                            <li><a href="tourism.html#jeddah">
+                                <span class="en">Jeddah</span>
+                                <span class="ar">جدة</span>
+                            </a></li>
+                            <li><a href="tourism.html#khobar">
+                                <span class="en">Khobar</span>
+                                <span class="ar">الخبر</span>
+                            </a></li>
+                            <li><a href="tourism.html#neom">
+                                <span class="en">NEOM</span>
+                                <span class="ar">نيوم</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Emergency</span>
+                            <span class="ar">الطوارئ</span>
+                        </h4>
+                        <ul>
+                            <li><a href="emergency.html#emergency-numbers">
+                                <span class="en">Emergency Numbers</span>
+                                <span class="ar">أرقام الطوارئ</span>
+                            </a></li>
+                            <li><a href="emergency.html#hospitals">
+                                <span class="en">Hospitals</span>
+                                <span class="ar">المستشفيات</span>
+                            </a></li>
+                            <li><a href="emergency.html#police-stations">
+                                <span class="en">Police Stations</span>
+                                <span class="ar">مراكز الشرطة</span>
+                            </a></li>
+                            <li><a href="emergency.html#embassies">
+                                <span class="en">Embassies</span>
+                                <span class="ar">السفارات</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>
+                        <span class="en">&copy; 2025 World Cup 2034 Saudi Arabia Guide | All Rights Reserved</span>
+                        <span class="ar">© 2025 دليل كأس العالم 2034 المملكة العربية السعودية | جميع الحقوق محفوظة</span>
+                    </p>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="language.js"></script>
+    <script src="main.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>

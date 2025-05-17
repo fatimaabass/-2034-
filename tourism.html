@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism & Entertainment - World Cup 2034 Saudi Arabia Guide</title>
+    <meta name="description" content="Discover Saudi Arabia's top tourist attractions, local cuisine, and entertainment options during World Cup 2034">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="rtl.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-image">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <circle cx="50" cy="50" r="45" fill="#006c35"/>
+                        <polygon points="50,20 60,40 85,40 65,55 75,80 50,65 25,80 35,55 15,40 40,40" fill="#fff"/>
+                    </svg>
+                </div>
+                <h1><span class="title-ar" lang="ar">دليل كأس العالم 2034</span><span class="title-en">World Cup 2034 Guide</span></h1>
+            </div>
+            <nav id="main-nav">
+                <button id="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul>
+                    <li><a href="index.html"><span class="en">Home</span><span class="ar">الرئيسية</span></a></li>
+                    <li><a href="stadiums.html"><span class="en">Stadiums</span><span class="ar">الملاعب</span></a></li>
+                    <li><a href="matches.html"><span class="en">Matches</span><span class="ar">المباريات</span></a></li>
+                    <li><a href="tourism.html" class="active"><span class="en">Tourism</span><span class="ar">السياحة</span></a></li>
+                    <li><a href="emergency.html"><span class="en">Emergency</span><span class="ar">الطوارئ</span></a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <button id="language-toggle" data-current-lang="en">
+                    <span class="en">العربية</span>
+                    <span class="ar">English</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="tourism-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>
+                    <span class="en">Discover Saudi Arabia</span>
+                    <span class="ar">اكتشف المملكة العربية السعودية</span>
+                </h2>
+                <p>
+                    <span class="en">Explore the beauty, culture, and cuisine of Saudi Arabia during your World Cup 2034 visit</span>
+                    <span class="ar">استكشف جمال وثقافة ومأكولات المملكة العربية السعودية أثناء زيارتك لكأس العالم 2034</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="city-selector">
+        <div class="container">
+            <h2>
+                <span class="en">Explore Host Cities</span>
+                <span class="ar">استكشف المدن المضيفة</span>
+            </h2>
+            <div class="city-tabs">
+                <button class="city-tab active" data-city="riyadh">
+                    <span class="en">Riyadh</span>
+                    <span class="ar">الرياض</span>
+                </button>
+                <button class="city-tab" data-city="jeddah">
+                    <span class="en">Jeddah</span>
+                    <span class="ar">جدة</span>
+                </button>
+                <button class="city-tab" data-city="khobar">
+                    <span class="en">Khobar</span>
+                    <span class="ar">الخبر</span>
+                </button>
+                <button class="city-tab" data-city="neom">
+                    <span class="en">NEOM</span>
+                    <span class="ar">نيوم</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="city-content">
+        <div class="container">
+            <div class="city-panel active" id="riyadh">
+                <div class="city-intro">
+                    <div class="city-image">
+                        <img src="capital.jpg" alt="Riyadh cityscape">
+                    </div>
+                    <div class="city-description">
+                        <h3>
+                            <span class="en">Riyadh - The Capital</span>
+                            <span class="ar">الرياض - العاصمة</span>
+                        </h3>
+                        <p>
+                            <span class="en">As the capital of Saudi Arabia, Riyadh combines modern architecture with rich cultural heritage. Explore historic sites, modern shopping malls, and experience traditional Saudi hospitality.</span>
+                            <span class="ar">كعاصمة المملكة العربية السعودية، تجمع الرياض بين العمارة الحديثة والتراث الثقافي الغني. استكشف المواقع التاريخية ومراكز التسوق الحديثة واختبر الضيافة السعودية التقليدية.</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="attractions-container">
+                    <h3>
+                        <span class="en">Top Attractions</span>
+                        <span class="ar">أبرز المعالم السياحية</span>
+                    </h3>
+                    <div class="attractions-grid">
+                        <div class="attraction-card">
+                            <div class="attraction-image">
+                                <img src="Al Masmak Fortress.jpg" alt="Al Masmak Fortress">
+                            </div>
+                            <div class="attraction-info">
+                                <h4>
+                                    <span class="en">Al Masmak Fortress</span>
+                                    <span class="ar">قصر المصمك</span>
+                                </h4>
+                                <p>
+                                    <span class="en">Historic 19th-century fortress symbolizing the unification of the Kingdom.</span>
+                                    <span class="ar">حصن تاريخي يعود للقرن التاسع عشر، يُعد رمزًا لتوحيد المملكة.</span>
+                                </p>
+                                <div class="attraction-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">Al Dirah, Riyadh</span>
+                                        <span class="ar">الديرة، الرياض</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="far fa-clock"></i>
+                                        <span class="en">Open: 9AM - 9PM</span>
+                                        <span class="ar">مفتوح: 9ص - 9م</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-ticket-alt"></i>
+                                        <span class="en">Free Entry</span>
+                                        <span class="ar">دخول مجاني</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="attraction-card">
+                            <div class="attraction-image">
+                                <img src="Kingdom Centre Tower200.jpg" alt="Kingdom Centre Tower">
+                            </div>
+                            <div class="attraction-info">
+                                <h4>
+                                    <span class="en">Kingdom Centre Tower</span>
+                                    <span class="ar">برج المملكة</span>
+                                </h4>
+                                <p>
+                                    <span class="en">Iconic skyscraper with shopping mall, hotel, and panoramic viewing platform.</span>
+                                    <span class="ar">ناطحة سحاب أيقونية تحتوي على مركز تسوق وفندق ومنصة مشاهدة بانورامية.</span>
+                                </p>
+                                <div class="attraction-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">Al Olaya, Riyadh</span>
+                                        <span class="ar">العليا، الرياض</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="far fa-clock"></i>
+                                        <span class="en">Open: 10AM - 11PM</span>
+                                        <span class="ar">مفتوح: 10ص - 11م</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-ticket-alt"></i>
+                                        <span class="en">Observation Deck: 50 SAR</span>
+                                        <span class="ar">منصة المراقبة: 50 ريال</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="attraction-card">
+                            <div class="attraction-image">
+                                <img src="National Museum200.jpg" alt="National Museum">
+                            </div>
+                            <div class="attraction-info">
+                                <h4>
+                                    <span class="en">National Museum</span>
+                                    <span class="ar">المتحف الوطني السعودي</span>
+                                </h4>
+                                <p>
+                                    <span class="en">Showcases the history and culture of Saudi Arabia through the ages.</span>
+                                    <span class="ar">يعرض تاريخ وثقافة المملكة العربية السعودية عبر العصور.</span>
+                                </p>
+                                <div class="attraction-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">King Faisal Road, Riyadh</span>
+                                        <span class="ar">طريق الملك فيصل، الرياض</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="far fa-clock"></i>
+                                        <span class="en">Open: 9AM - 7PM (Closed on Mondays)</span>
+                                        <span class="ar">مفتوح: 9ص - 7م (مغلق الاثنين)</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-ticket-alt"></i>
+                                        <span class="en">Entry: 10 SAR</span>
+                                        <span class="ar">الدخول: 10 ريال</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="attraction-card">
+                            <div class="attraction-image">
+                                <img src="Al Turaif District, Diriyah.png" alt="Al Turaif District">
+                            </div>
+                            <div class="attraction-info">
+                                <h4>
+                                    <span class="en">Al Turaif District, Diriyah</span>
+                                    <span class="ar">حي الطريف، الدرعية</span>
+                                </h4>
+                                <p>
+                                    <span class="en">UNESCO World Heritage site, reflecting the history of the first Saudi State.</span>
+                                    <span class="ar">موقع تراث عالمي لليونسكو، يعكس تاريخ الدولة السعودية الأولى.</span>
+                                </p>
+                                <div class="attraction-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">Diriyah, on the outskirts of Riyadh</span>
+                                        <span class="ar">الدرعية، على مشارف الرياض</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="far fa-clock"></i>
+                                        <span class="en">Open: 9AM - 10PM</span>
+                                        <span class="ar">مفتوح: 9ص - 10م</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-ticket-alt"></i>
+                                        <span class="en">Entry: 15 SAR</span>
+                                        <span class="ar">الدخول: 15 ريال</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="attraction-card">
+                            <div class="attraction-image">
+                                <img src="Riyadh Boulevard.jpg" alt="Riyadh Boulevard">
+                            </div>
+                            <div class="attraction-info">
+                                <h4>
+                                    <span class="en">Riyadh Boulevard</span>
+                                    <span class="ar">بوليفارد الرياض</span>
+                                </h4>
+                                <p>
+                                    <span class="en">Entertainment zone with restaurants, cafes, and artistic performances.</span>
+                                    <span class="ar">منطقة ترفيهية تضم مطاعم ومقاهي وعروضًا فنية.</span>
+                                </p>
+                                <div class="attraction-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">Eastern Ring Road, Riyadh</span>
+                                        <span class="ar">الطريق الدائري الشرقي، الرياض</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="far fa-clock"></i>
+                                        <span class="en">Open: 5PM - 1AM</span>
+                                        <span class="ar">مفتوح: 5م - 1ص</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-ticket-alt"></i>
+                                        <span class="en">Free Entry (Activities vary)</span>
+                                        <span class="ar">دخول مجاني (الأنشطة متنوعة)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dining-options">
+                    <h3>
+                        <span class="en">Where to Eat</span>
+                        <span class="ar">أماكن الطعام</span>
+                    </h3>
+                    <div class="dining-grid">
+                        <div class="dining-card">
+                            <h4>
+                                <span class="en">Najd Village</span>
+                                <span class="ar">قرية نجد</span>
+                            </h4>
+                            <p>
+                                <span class="en">Traditional Saudi dining experience in an authentic Najdi setting.</span>
+                                <span class="ar">تجربة طعام سعودية تقليدية في أجواء نجدية أصيلة.</span>
+                            </p>
+                            <div class="dining-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span class="en">Saudi Cuisine</span>
+                                    <span class="ar">المطبخ السعودي</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span class="en">Price Range: $$$</span>
+                                    <span class="ar">نطاق السعر: $$$</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dining-card">
+                            <h4>
+                                <span class="en">Takya</span>
+                                <span class="ar">تكية</span>
+                            </h4>
+                            <p>
+                                <span class="en">Modern take on Saudi cuisine with elegant presentation.</span>
+                                <span class="ar">نسخة حديثة من المطبخ السعودي مع تقديم أنيق.</span>
+                            </p>
+                            <div class="dining-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span class="en">Contemporary Saudi</span>
+                                    <span class="ar">سعودي معاصر</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span class="en">Price Range: $$$$</span>
+                                    <span class="ar">نطاق السعر: $$$$</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dining-card">
+                            <h4>
+                                <span class="en">Mama Noura</span>
+                                <span class="ar">ماما نورة</span>
+                            </h4>
+                            <p>
+                                <span class="en">Popular local shawarma and Middle Eastern fast food restaurant.</span>
+                                <span class="ar">مطعم شعبي محلي للشاورما والوجبات السريعة الشرق أوسطية.</span>
+                            </p>
+                            <div class="dining-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span class="en">Middle Eastern</span>
+                                    <span class="ar">شرق أوسطي</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span class="en">Price Range: $</span>
+                                    <span class="ar">نطاق السعر: $</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="near-stadiums">
+                    <h3>
+                        <span class="en">Near the Stadiums</span>
+                        <span class="ar">بالقرب من الملاعب</span>
+                    </h3>
+                    <div class="stadium-vicinity">
+                        <h4>
+                            <span class="en">Around King Salman International Stadium</span>
+                            <span class="ar">حول استاد الملك سلمان الدولي</span>
+                        </h4>
+                        <div class="vicinity-options">
+                            <div class="option-category">
+                                <h5>
+                                    <i class="fas fa-hotel"></i>
+                                    <span class="en">Hotels</span>
+                                    <span class="ar">الفنادق</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <span class="en">Four Seasons Hotel Riyadh</span>
+                                        <span class="ar">فندق فورسيزونز الرياض</span>
+                                    </li>
+                                    <li>
+                                        <span class="en">Hyatt Regency Riyadh Olaya</span>
+                                        <span class="ar">حياة ريجنسي الرياض العليا</span>
+                                    </li>
+                                    <li>
+                                        <span class="en">Crowne Plaza Riyadh RDC Hotel</span>
+                                        <span class="ar">كراون بلازا الرياض آر دي سي</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="option-category">
+                                <h5>
+                                    <i class="fas fa-utensils"></i>
+                                    <span class="en">Restaurants</span>
+                                    <span class="ar">المطاعم</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <span class="en">The Globe Restaurant</span>
+                                        <span class="ar">مطعم ذا جلوب</span>
+                                    </li>
+                                    <li>
+                                        <span class="en">Mirage Restaurant</span>
+                                        <span class="ar">مطعم ميراج</span>
+                                    </li>
+                                    <li>
+                                        <span class="en">Elements Restaurant</span>
+                                        <span class="ar">مطعم إلمنتس</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="option-category">
+                                <h5>
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <span class="en">Shopping</span>
+                                    <span class="ar">التسوق</span>
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <span class="en">Al Nakheel Mall</span>
+                                        <span class="ar">النخيل مول</span>
+                                    </li>
+                                    <li>
+                                        <span class="en">Kingdom Centre Mall</span>
+                                        <span class="ar">مركز المملكة التجاري</span>
+                                    </li>
+                                    <li>
+                                        <span class="en">Granada Mall</span>
+                                        <span class="ar">غرناطة مول</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other city panels would follow the same structure -->
+            <div class="city-panel" id="jeddah">
+                <!-- Similar structure as Riyadh but with Jeddah content -->
+            </div>
+            
+            <div class="city-panel" id="khobar">
+                <!-- Similar structure as Riyadh but with Khobar content -->
+            </div>
+            
+            <div class="city-panel" id="neom">
+                <!-- Similar structure as Riyadh but with NEOM content -->
+            </div>
+        </div>
+    </section>
+
+    <section id="local-cuisine">
+        <div class="container">
+            <h2>
+                <span class="en">Traditional Saudi Cuisine</span>
+                <span class="ar">المطبخ السعودي التقليدي</span>
+            </h2>
+            <p class="section-desc">
+                <span class="en">Experience authentic Saudi flavors during your World Cup visit</span>
+                <span class="ar">جرّب النكهات السعودية الأصيلة خلال زيارتك لكأس العالم</span>
+            </p>
+            <div class="cuisine-grid">
+                <div class="cuisine-item">
+                    <img src="Kabsa.jpg" alt="Kabsa - Saudi traditional dish">
+                    <h3>
+                        <span class="en">Kabsa</span>
+                        <span class="ar">كبسة</span>
+                    </h3>
+                    <p>
+                        <span class="en">The national dish of Saudi Arabia featuring rice with spices, vegetables, and meat (usually chicken, lamb, goat, beef, camel, or fish).</span>
+                        <span class="ar">الطبق الوطني للمملكة العربية السعودية يتكون من الأرز مع التوابل والخضروات واللحوم (عادة الدجاج أو الضأن أو الماعز أو البقر أو الجمل أو السمك).</span>
+                    </p>
+                </div>
+                
+                <div class="cuisine-item">
+                    <img src="Mandi.jpg" alt="Mandi - Traditional Arabian dish">
+                    <h3>
+                        <span class="en">Mandi</span>
+                        <span class="ar">مندي</span>
+                    </h3>
+                    <p>
+                        <span class="en">A traditional dish from Yemen that has become popular in Saudi Arabia, featuring meat and rice cooked in a special way with spices.</span>
+                        <span class="ar">طبق تقليدي من اليمن أصبح شائعًا في المملكة العربية السعودية، يتكون من اللحم والأرز المطبوخ بطريقة خاصة مع التوابل.</span>
+                    </p>
+                </div>
+                
+                <div class="cuisine-item">
+                    <img src="Mutabbaq.jpg" alt="Mutabbaq - Stuffed bread">
+                    <h3>
+                        <span class="en">Mutabbaq</span>
+                        <span class="ar">مطبق</span>
+                    </h3>
+                    <p>
+                        <span class="en">A stuffed pancake or pan-fried bread commonly filled with eggs, leeks, and minced meat.</span>
+                        <span class="ar">فطيرة محشوة أو خبز مقلي يحشى عادة بالبيض والكراث واللحم المفروم.</span>
+                    </p>
+                </div>
+                
+                <div class="cuisine-item">
+                    <img src="Saudi Coffee & Dates.jpg" alt="Saudi Coffee and Dates">
+                    <h3>
+                        <span class="en">Saudi Coffee & Dates</span>
+                        <span class="ar">القهوة السعودية والتمر</span>
+                    </h3>
+                    <p>
+                        <span class="en">Traditional Arabic coffee served with dates is a symbol of hospitality in Saudi culture.</span>
+                        <span class="ar">القهوة العربية التقليدية المقدمة مع التمر هي رمز للضيافة في الثقافة السعودية.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="transportation">
+        <div class="container">
+            <h2>
+                <span class="en">Getting Around</span>
+                <span class="ar">التنقل</span>
+            </h2>
+            <div class="transport-options">
+                <div class="transport-option">
+                    <div class="transport-icon">
+                        <i class="fas fa-subway"></i>
+                    </div>
+                    <h3>
+                        <span class="en">Public Transport</span>
+                        <span class="ar">النقل العام</span>
+                    </h3>
+                    <p>
+                        <span class="en">Major cities have metros, buses, and World Cup shuttle services connecting stadiums.</span>
+                        <span class="ar">المدن الكبرى بها مترو وحافلات وخدمات نقل خاصة بكأس العالم تربط الملاعب.</span>
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="en">Riyadh Metro: 6 lines connecting major areas</span>
+                            <span class="ar">مترو الرياض: 6 خطوط تربط المناطق الرئيسية</span>
+                        </li>
+                        <li>
+                            <span class="en">Jeddah Metro: Under development for World Cup</span>
+                            <span class="ar">مترو جدة: قيد التطوير لكأس العالم</span>
+                        </li>
+                        <li>
+                            <span class="en">SAPTCO Bus Network: Covers major cities</span>
+                            <span class="ar">شبكة حافلات سابتكو: تغطي المدن الرئيسية</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="transport-option">
+                    <div class="transport-icon">
+                        <i class="fas fa-taxi"></i>
+                    </div>
+                    <h3>
+                        <span class="en">Taxis & Ride Apps</span>
+                        <span class="ar">سيارات الأجرة وتطبيقات النقل</span>
+                    </h3>
+                    <p>
+                        <span class="en">Convenient options available throughout all World Cup host cities.</span>
+                        <span class="ar">خيارات مريحة متوفرة في جميع المدن المضيفة لكأس العالم.</span>
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="en">Uber: Available in all major cities</span>
+                            <span class="ar">أوبر: متاح في جميع المدن الرئيسية</span>
+                        </li>
+                        <li>
+                            <span class="en">Careem: Popular local ride-hailing app</span>
+                            <span class="ar">كريم: تطبيق محلي شعبي لطلب السيارات</span>
+                        </li>
+                        <li>
+                            <span class="en">Regular taxis: Available at airports, hotels, and major landmarks</span>
+                            <span class="ar">سيارات الأجرة العادية: متوفرة في المطارات والفنادق والمعالم الرئيسية</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="transport-option">
+                    <div class="transport-icon">
+                        <i class="fas fa-train"></i>
+                    </div>
+                    <h3>
+                        <span class="en">Inter-city Transport</span>
+                        <span class="ar">النقل بين المدن</span>
+                    </h3>
+                    <p>
+                        <span class="en">Options for traveling between World Cup host cities.</span>
+                        <span class="ar">خيارات للتنقل بين المدن المضيفة لكأس العالم.</span>
+                    </p>
+                    <ul>
+                        <li>
+                            <span class="en">Saudi Railways: High-speed trains connecting major cities</span>
+                            <span class="ar">السكك الحديدية السعودية: قطارات فائقة السرعة تربط المدن الرئيسية</span>
+                        </li>
+                        <li>
+                            <span class="en">Domestic Flights: Quick travel between distant host cities</span>
+                            <span class="ar">الرحلات الداخلية: سفر سريع بين المدن المضيفة البعيدة</span>
+                        </li>
+                        <li>
+                            <span class="en">World Cup Fan Shuttles: Special services for ticket holders</span>
+                            <span class="ar">خدمات نقل المشجعين: خدمات خاصة لحاملي التذاكر</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tourist-map" class="full-width">
+        <div class="container">
+            <h2>
+                <span class="en">Interactive Tourism Map</span>
+                <span class="ar">خريطة السياحة التفاعلية</span>
+            </h2>
+            <div id="tourism-map"></div>
+            <div class="map-legend">
+                <div class="legend-item">
+                    <div class="legend-marker stadium"></div>
+                    <span class="en">Stadiums</span>
+                    <span class="ar">الملاعب</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-marker attraction"></div>
+                    <span class="en">Tourist Attractions</span>
+                    <span class="ar">المعالم السياحية</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-marker hotel"></div>
+                    <span class="en">Hotels</span>
+                    <span class="ar">الفنادق</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-marker restaurant"></div>
+                    <span class="en">Restaurants</span>
+                    <span class="ar">المطاعم</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg viewBox="0 0 100 100" class="footer-logo-svg">
+                        <circle cx="50" cy="50" r="45" fill="#006c35"/>
+                        <polygon points="50,20 60,40 85,40 65,55 75,80 50,65 25,80 35,55 15,40 40,40" fill="#fff"/>
+                    </svg>
+                    <h3>
+                        <span class="en">World Cup 2034 Saudi Arabia</span>
+                        <span class="ar">كأس العالم 2034 المملكة العربية السعودية</span>
+                    </h3>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Guide</span>
+                            <span class="ar">الدليل</span>
+                        </h4>
+                        <ul>
+                            <li><a href="index.html">
+                                <span class="en">Home</span>
+                                <span class="ar">الرئيسية</span>
+                            </a></li>
+                            <li><a href="stadiums.html">
+                                <span class="en">Stadiums</span>
+                                <span class="ar">الملاعب</span>
+                            </a></li>
+                            <li><a href="matches.html">
+                                <span class="en">Matches</span>
+                                <span class="ar">المباريات</span>
+                            </a></li>
+                            <li><a href="tourism.html">
+                                <span class="en">Tourism</span>
+                                <span class="ar">السياحة</span>
+                            </a></li>
+                            <li><a href="emergency.html">
+                                <span class="en">Emergency</span>
+                                <span class="ar">الطوارئ</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Cities</span>
+                            <span class="ar">المدن</span>
+                        </h4>
+                        <ul>
+                            <li><a href="tourism.html#riyadh">
+                                <span class="en">Riyadh</span>
+                                <span class="ar">الرياض</span>
+                            </a></li>
+                            <li><a href="tourism.html#jeddah">
+                                <span class="en">Jeddah</span>
+                                <span class="ar">جدة</span>
+                            </a></li>
+                            <li><a href="tourism.html#khobar">
+                                <span class="en">Khobar</span>
+                                <span class="ar">الخبر</span>
+                            </a></li>
+                            <li><a href="tourism.html#neom">
+                                <span class="en">NEOM</span>
+                                <span class="ar">نيوم</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Emergency</span>
+                            <span class="ar">الطوارئ</span>
+                        </h4>
+                        <ul>
+                            <li><a href="emergency.html#emergency-numbers">
+                                <span class="en">Emergency Numbers</span>
+                                <span class="ar">أرقام الطوارئ</span>
+                            </a></li>
+                            <li><a href="emergency.html#hospitals">
+                                <span class="en">Hospitals</span>
+                                <span class="ar">المستشفيات</span>
+                            </a></li>
+                            <li><a href="emergency.html#police-stations">
+                                <span class="en">Police Stations</span>
+                                <span class="ar">مراكز الشرطة</span>
+                            </a></li>
+                            <li><a href="emergency.html#embassies">
+                                <span class="en">Embassies</span>
+                                <span class="ar">السفارات</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>
+                        <span class="en">&copy; 2025 World Cup 2034 Saudi Arabia Guide | All Rights Reserved</span>
+                        <span class="ar">© 2025 دليل كأس العالم 2034 المملكة العربية السعودية | جميع الحقوق محفوظة</span>
+                    </p>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="tourism-info.js"></script>
+    <script src="language.js"></script>
+    <script src="tourism.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>

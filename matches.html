@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Schedule - World Cup 2034 Saudi Arabia Guide</title>
+    <meta name="description" content="Complete match schedule for World Cup 2034 in Saudi Arabia with filtering options">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="matches.css">
+    <link rel="stylesheet" href="rtl.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-image">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <circle cx="50" cy="50" r="45" fill="#006c35"/>
+                        <polygon points="50,20 60,40 85,40 65,55 75,80 50,65 25,80 35,55 15,40 40,40" fill="#fff"/>
+                    </svg>
+                </div>
+                <h1><span class="title-ar" lang="ar">دليل كأس العالم 2034</span><span class="title-en">World Cup 2034 Guide</span></h1>
+            </div>
+            <nav id="main-nav">
+                <button id="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul>
+                    <li><a href="index.html"><span class="en">Home</span><span class="ar">الرئيسية</span></a></li>
+                    <li><a href="stadiums.html"><span class="en">Stadiums</span><span class="ar">الملاعب</span></a></li>
+                    <li><a href="matches.html" class="active"><span class="en">Matches</span><span class="ar">المباريات</span></a></li>
+                    <li><a href="tourism.html"><span class="en">Tourism</span><span class="ar">السياحة</span></a></li>
+                    <li><a href="emergency.html"><span class="en">Emergency</span><span class="ar">الطوارئ</span></a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <button id="language-toggle" data-current-lang="en">
+                    <span class="en">العربية</span>
+                    <span class="ar">English</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="matches-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>
+                    <span class="en">Match Schedule</span>
+                    <span class="ar">جدول المباريات</span>
+                </h2>
+                <p>
+                    <span class="en">Plan your World Cup 2034 experience with our comprehensive match schedule</span>
+                    <span class="ar">خطط لتجربتك في كأس العالم 2034 مع جدول المباريات الشامل الخاص بنا</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="match-tools">
+        <div class="container">
+            <div class="tools-wrapper">
+                <div class="search-and-filter">
+                    <div class="search-bar">
+                        <input type="text" id="match-search" placeholder="Search teams...">
+                        <button id="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="filter-options">
+                        <div class="filter-group">
+                            <label for="stage-filter">
+                                <span class="en">Tournament Stage:</span>
+                                <span class="ar">مرحلة البطولة:</span>
+                            </label>
+                            <select id="stage-filter">
+                                <option value="all">
+                                    <span class="en">All Stages</span>
+                                    <span class="ar">جميع المراحل</span>
+                                </option>
+                                <option value="group">
+                                    <span class="en">Group Stage</span>
+                                    <span class="ar">دور المجموعات</span>
+                                </option>
+                                <option value="round-32">
+                                    <span class="en">Round of 32</span>
+                                    <span class="ar">دور الـ32</span>
+                                </option>
+                                <option value="round-16">
+                                    <span class="en">Round of 16</span>
+                                    <span class="ar">دور الـ16</span>
+                                </option>
+                                <option value="quarterfinal">
+                                    <span class="en">Quarter Finals</span>
+                                    <span class="ar">ربع النهائي</span>
+                                </option>
+                                <option value="semifinal">
+                                    <span class="en">Semi Finals</span>
+                                    <span class="ar">نصف النهائي</span>
+                                </option>
+                                <option value="third-place">
+                                    <span class="en">Third Place</span>
+                                    <span class="ar">المركز الثالث</span>
+                                </option>
+                                <option value="final">
+                                    <span class="en">Final</span>
+                                    <span class="ar">النهائي</span>
+                                </option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="stadium-filter">
+                                <span class="en">Stadium:</span>
+                                <span class="ar">الملعب:</span>
+                            </label>
+                            <select id="stadium-filter">
+                                <option value="all">
+                                    <span class="en">All Stadiums</span>
+                                    <span class="ar">جميع الملاعب</span>
+                                </option>
+                                <!-- Stadiums will be loaded dynamically -->
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label for="date-filter">
+                                <span class="en">Date:</span>
+                                <span class="ar">التاريخ:</span>
+                            </label>
+                            <input type="date" id="date-filter">
+                        </div>
+                    </div>
+                    <div class="advanced-filters">
+                        <div class="favorite-teams">
+                            <label for="favorite-teams-select">
+                                <span class="en">My Favorite Teams:</span>
+                                <span class="ar">فرقي المفضلة:</span>
+                            </label>
+                            <select id="favorite-teams-select" multiple>
+                                <!-- Teams will be populated dynamically -->
+                            </select>
+                            <button id="show-favorites-only" class="btn small">
+                                <span class="en">Show Only My Teams</span>
+                                <span class="ar">إظهار فرقي فقط</span>
+                            </button>
+                        </div>
+                        <button id="reset-match-filters" class="btn small">
+                            <span class="en">Reset All Filters</span>
+                            <span class="ar">إعادة ضبط جميع الفلاتر</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="notification-preference">
+                    <h3>
+                        <span class="en">Match Notifications</span>
+                        <span class="ar">إشعارات المباريات</span>
+                    </h3>
+                    <p>
+                        <span class="en">Get notified before your favorite matches</span>
+                        <span class="ar">احصل على إشعارات قبل مبارياتك المفضلة</span>
+                    </p>
+                    <div class="notification-controls">
+                        <div class="notification-toggle">
+                            <input type="checkbox" id="enable-notifications">
+                            <label for="enable-notifications">
+                                <span class="en">Enable Notifications</span>
+                                <span class="ar">تفعيل الإشعارات</span>
+                            </label>
+                        </div>
+                        <div class="notification-time">
+                            <label for="notification-time-select">
+                                <span class="en">Notify me</span>
+                                <span class="ar">تنبيهي قبل</span>
+                            </label>
+                            <select id="notification-time-select">
+                                <option value="30">
+                                    <span class="en">30 minutes before</span>
+                                    <span class="ar">30 دقيقة</span>
+                                </option>
+                                <option value="60">
+                                    <span class="en">1 hour before</span>
+                                    <span class="ar">ساعة واحدة</span>
+                                </option>
+                                <option value="120">
+                                    <span class="en">2 hours before</span>
+                                    <span class="ar">ساعتين</span>
+                                </option>
+                                <option value="1440">
+                                    <span class="en">1 day before</span>
+                                    <span class="ar">يوم واحد</span>
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="match-schedule">
+        <div class="container">
+            <h2>
+                <span class="en">Complete Match Schedule</span>
+                <span class="ar">جدول المباريات الكامل</span>
+            </h2>
+            <div id="schedule-container">
+                <!-- This will be filled dynamically with match data -->
+                <div class="match-day">
+                    <div class="date-header">
+                        <h3>
+                            <span class="en">Friday, July 8, 2034</span>
+                            <span class="ar">الجمعة، 8 يوليو 2034</span>
+                        </h3>
+                        <span class="match-count">3 Matches</span>
+                    </div>
+                    
+                    <div class="match-card" data-stage="group" data-stadium="king-salman" data-teams="saudi-arabia,iraq">
+                        <div class="match-time">
+                            <span class="time">18:00</span>
+                            <span class="timezone">KSA</span>
+                        </div>
+                        <div class="match-teams">
+                            <div class="team team-home">
+                                <img src="https://placehold.co/30x30?text=SA" alt="Saudi Arabia flag" class="team-flag">
+                                <span class="team-name">
+                                    <span class="en">Saudi Arabia</span>
+                                    <span class="ar">المملكة العربية السعودية</span>
+                                </span>
+                            </div>
+                            <div class="match-result">
+                                <span class="vs">VS</span>
+                            </div>
+                            <div class="team team-away">
+                                <img src="https://placehold.co/30x30?text=IQ" alt="Iraq flag" class="team-flag">
+                                <span class="team-name">
+                                    <span class="en">Iraq</span>
+                                    <span class="ar">العراق</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="match-details">
+                            <div class="match-group">
+                                <span class="en">Group A</span>
+                                <span class="ar">المجموعة أ</span>
+                            </div>
+                            <div class="match-stadium">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="en">King Salman Int'l Stadium, Riyadh</span>
+                                <span class="ar">استاد الملك سلمان الدولي، الرياض</span>
+                            </div>
+                        </div>
+                        <div class="match-actions">
+                            <button class="btn small match-notify" data-match-id="1">
+                                <i class="far fa-bell"></i>
+                                <span class="en">Notify Me</span>
+                                <span class="ar">تنبيهي</span>
+                            </button>
+                            <button class="btn small outline match-info" data-match-id="1">
+                                <i class="fas fa-info-circle"></i>
+                                <span class="en">Details</span>
+                                <span class="ar">التفاصيل</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- More matches would be dynamically added here -->
+                </div>
+                <!-- More match days would be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="match-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="match-detail-content">
+                <!-- Modal content will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg viewBox="0 0 100 100" class="footer-logo-svg">
+                        <circle cx="50" cy="50" r="45" fill="#006c35"/>
+                        <polygon points="50,20 60,40 85,40 65,55 75,80 50,65 25,80 35,55 15,40 40,40" fill="#fff"/>
+                    </svg>
+                    <h3>
+                        <span class="en">World Cup 2034 Saudi Arabia</span>
+                        <span class="ar">كأس العالم 2034 المملكة العربية السعودية</span>
+                    </h3>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Guide</span>
+                            <span class="ar">الدليل</span>
+                        </h4>
+                        <ul>
+                            <li><a href="index.html">
+                                <span class="en">Home</span>
+                                <span class="ar">الرئيسية</span>
+                            </a></li>
+                            <li><a href="stadiums.html">
+                                <span class="en">Stadiums</span>
+                                <span class="ar">الملاعب</span>
+                            </a></li>
+                            <li><a href="matches.html">
+                                <span class="en">Matches</span>
+                                <span class="ar">المباريات</span>
+                            </a></li>
+                            <li><a href="tourism.html">
+                                <span class="en">Tourism</span>
+                                <span class="ar">السياحة</span>
+                            </a></li>
+                            <li><a href="emergency.html">
+                                <span class="en">Emergency</span>
+                                <span class="ar">الطوارئ</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Cities</span>
+                            <span class="ar">المدن</span>
+                        </h4>
+                        <ul>
+                            <li><a href="tourism.html#riyadh">
+                                <span class="en">Riyadh</span>
+                                <span class="ar">الرياض</span>
+                            </a></li>
+                            <li><a href="tourism.html#jeddah">
+                                <span class="en">Jeddah</span>
+                                <span class="ar">جدة</span>
+                            </a></li>
+                            <li><a href="tourism.html#khobar">
+                                <span class="en">Khobar</span>
+                                <span class="ar">الخبر</span>
+                            </a></li>
+                            <li><a href="tourism.html#neom">
+                                <span class="en">NEOM</span>
+                                <span class="ar">نيوم</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Emergency</span>
+                            <span class="ar">الطوارئ</span>
+                        </h4>
+                        <ul>
+                            <li><a href="emergency.html#emergency-numbers">
+                                <span class="en">Emergency Numbers</span>
+                                <span class="ar">أرقام الطوارئ</span>
+                            </a></li>
+                            <li><a href="emergency.html#hospitals">
+                                <span class="en">Hospitals</span>
+                                <span class="ar">المستشفيات</span>
+                            </a></li>
+                            <li><a href="emergency.html#police-stations">
+                                <span class="en">Police Stations</span>
+                                <span class="ar">مراكز الشرطة</span>
+                            </a></li>
+                            <li><a href="emergency.html#embassies">
+                                <span class="en">Embassies</span>
+                                <span class="ar">السفارات</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>
+                        <span class="en">&copy; 2025 World Cup 2034 Saudi Arabia Guide | All Rights Reserved</span>
+                        <span class="ar">© 2025 دليل كأس العالم 2034 المملكة العربية السعودية | جميع الحقوق محفوظة</span>
+                    </p>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="stadiums.js"></script>
+    <script src="matches-info.js"></script>
+    <script src="language.js"></script>
+    <script src="matches.js"></script>
+</body>
+</html>

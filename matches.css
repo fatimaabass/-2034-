@@ -1,0 +1,588 @@
+/* Match Page Styles - World Cup 2034 Saudi Arabia Guide */
+
+/* 
+ * Table of Contents:
+ * 1. Stage & Group Sections
+ * 2. Match Day Containers
+ * 3. Match Cards
+ * 4. Match Details
+ * 5. Filters and Search
+ * 6. Favorite Teams
+ * 7. Notifications
+ * 8. Match Modal
+ * 9. RTL Support
+ */
+
+/* ==========================================
+   1. Stage & Group Sections
+   ========================================== */
+.stage-container {
+    margin-bottom: var(--spacing-xxl);
+}
+
+.stage-header {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.75rem;
+}
+
+.group-header {
+    color: var(--dark-color);
+    background-color: var(--very-light-gray);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    margin: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+/* ==========================================
+   2. Match Day Containers
+   ========================================== */
+.match-day {
+    margin-bottom: var(--spacing-xl);
+}
+
+.date-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.date-header h4 {
+    margin-bottom: 0;
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+.match-count {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.match-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-md);
+}
+
+/* ==========================================
+   3. Match Cards
+   ========================================== */
+.match-card {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.match-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.match-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--very-light-gray);
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.match-stage {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.match-time {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.match-time .time {
+    font-size: 1.125rem;
+    margin-right: var(--spacing-xs);
+}
+
+.match-time .timezone {
+    font-size: 0.75rem;
+    color: var(--medium-gray);
+}
+
+.match-teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+    background-color: var(--white-color);
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.team-home {
+    text-align: right;
+}
+
+.team-away {
+    text-align: left;
+}
+
+.team-code {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    color: var(--dark-color);
+}
+
+.team-name {
+    color: var(--medium-gray);
+    font-size: 0.875rem;
+}
+
+.match-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 var(--spacing-md);
+}
+
+.vs {
+    font-weight: 600;
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.match-details {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-top: 1px solid var(--light-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.match-venue {
+    font-size: 0.875rem;
+    color: var(--medium-gray);
+    display: flex;
+    align-items: center;
+}
+
+.match-venue i {
+    color: var(--primary-color);
+    margin-right: var(--spacing-xs);
+}
+
+.match-actions {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.match-actions .btn {
+    font-size: 0.75rem;
+}
+
+.match-actions .match-notify.active {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: var(--white-color);
+}
+
+/* ==========================================
+   4. Match Details
+   ========================================== */
+.match-detail-header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: var(--spacing-lg);
+    text-align: center;
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+}
+
+.match-detail-stage {
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.match-detail-date {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin-bottom: var(--spacing-xs);
+}
+
+.match-detail-time {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.match-detail-teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    background-color: var(--white-color);
+}
+
+.team-detail {
+    text-align: center;
+    flex: 1;
+}
+
+.team-detail .team-code {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: var(--spacing-sm);
+}
+
+.team-detail .team-name {
+    font-size: 1rem;
+}
+
+.match-detail-vs {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    padding: 0 var(--spacing-md);
+}
+
+.match-detail-venue, 
+.match-detail-transport, 
+.match-detail-nearby, 
+.match-detail-description {
+    padding: var(--spacing-lg);
+    border-top: 1px solid var(--light-gray);
+}
+
+.match-detail-venue h3, 
+.match-detail-transport h3, 
+.match-detail-nearby h3, 
+.match-detail-description h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.25rem;
+}
+
+.stadium-info {
+    display: flex;
+    align-items: center;
+    color: var(--dark-gray);
+}
+
+.stadium-info i {
+    margin-right: var(--spacing-md);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.stadium-name {
+    font-weight: 600;
+    margin-right: var(--spacing-xs);
+}
+
+.transport-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.transport-list li {
+    display: flex;
+    margin-bottom: var(--spacing-md);
+}
+
+.transport-list li:last-child {
+    margin-bottom: 0;
+}
+
+.transport-list i {
+    margin-right: var(--spacing-md);
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.transport-info strong {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.nearby-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+.nearby-section:last-child {
+    margin-bottom: 0;
+}
+
+.nearby-section h4 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-gray);
+}
+
+.nearby-section ul {
+    list-style: disc;
+    padding-left: var(--spacing-lg);
+    margin-bottom: 0;
+}
+
+.place-desc {
+    color: var(--medium-gray);
+    font-size: 0.875rem;
+}
+
+/* ==========================================
+   5. Filters and Search
+   ========================================== */
+.match-filters {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.filter-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-md);
+}
+
+.filter-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.filter-toggle input[type="checkbox"] {
+    width: auto;
+    margin-right: var(--spacing-xs);
+}
+
+/* ==========================================
+   6. Favorite Teams
+   ========================================== */
+.favorite-teams-container {
+    margin-top: var(--spacing-md);
+}
+
+.favorite-teams-list {
+    margin-top: var(--spacing-sm);
+    margin-bottom: 0;
+}
+
+.favorite-teams-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--very-light-gray);
+    border-radius: var(--border-radius-sm);
+    margin-bottom: var(--spacing-xs);
+}
+
+.favorite-teams-list li:last-child {
+    margin-bottom: 0;
+}
+
+.no-favorites {
+    color: var(--medium-gray);
+    font-style: italic;
+}
+
+.remove-favorite {
+    padding: var(--spacing-xs) !important;
+    margin-left: var(--spacing-xs);
+    color: var(--medium-gray);
+}
+
+.remove-favorite:hover {
+    color: var(--danger-color);
+}
+
+/* ==========================================
+   7. Notifications
+   ========================================== */
+.notification-settings {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--light-gray);
+}
+
+.notification-settings h4 {
+    margin-bottom: var(--spacing-md);
+}
+
+.notification-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.notification-option input[type="checkbox"] {
+    width: auto;
+    margin-right: var(--spacing-sm);
+}
+
+.notification-time {
+    margin-top: var(--spacing-sm);
+    margin-left: var(--spacing-xl);
+}
+
+.notification-message {
+    position: fixed;
+    bottom: var(--spacing-lg);
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    transition: transform var(--transition-medium), opacity var(--transition-medium);
+    z-index: 1000;
+}
+
+.notification-message.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+/* ==========================================
+   8. Match Modal
+   ========================================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: var(--white-color);
+    margin: var(--spacing-lg) auto;
+    width: calc(100% - var(--spacing-xl));
+    max-width: 800px;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    color: var(--white-color);
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.close-modal:hover {
+    opacity: 0.8;
+}
+
+/* ==========================================
+   9. RTL Support
+   ========================================== */
+.rtl .match-time .time {
+    margin-right: 0;
+    margin-left: var(--spacing-xs);
+}
+
+.rtl .match-venue i, 
+.rtl .stadium-info i, 
+.rtl .transport-list i {
+    margin-right: 0;
+    margin-left: var(--spacing-xs);
+}
+
+.rtl .team-home {
+    text-align: left;
+}
+
+.rtl .team-away {
+    text-align: right;
+}
+
+.rtl .filter-toggle input[type="checkbox"],
+.rtl .notification-option input[type="checkbox"] {
+    margin-right: 0;
+    margin-left: var(--spacing-xs);
+}
+
+.rtl .close-modal {
+    right: auto;
+    left: var(--spacing-md);
+}
+
+.rtl .remove-favorite {
+    margin-left: 0;
+    margin-right: var(--spacing-xs);
+}
+
+.rtl .notification-time {
+    margin-left: 0;
+    margin-right: var(--spacing-xl);
+}
+
+.rtl .nearby-section ul {
+    padding-left: 0;
+    padding-right: var(--spacing-lg);
+}
+
+/* No Results Message */
+.no-results-message {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background-color: var(--very-light-gray);
+    border-radius: var(--border-radius-md);
+    margin: var(--spacing-lg) 0;
+}
+
+.no-results-message p {
+    color: var(--dark-gray);
+    font-size: 1.125rem;
+    margin-bottom: 0;
+}

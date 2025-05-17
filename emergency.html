@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Information - World Cup 2034 Saudi Arabia Guide</title>
+    <meta name="description" content="Essential emergency information, contacts, and services for World Cup 2034 visitors in Saudi Arabia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="rtl.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-image">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <circle cx="50" cy="50" r="45" fill="#006c35"/>
+                        <polygon points="50,20 60,40 85,40 65,55 75,80 50,65 25,80 35,55 15,40 40,40" fill="#fff"/>
+                    </svg>
+                </div>
+                <h1><span class="title-ar" lang="ar">دليل كأس العالم 2034</span><span class="title-en">World Cup 2034 Guide</span></h1>
+            </div>
+            <nav id="main-nav">
+                <button id="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul>
+                    <li><a href="index.html"><span class="en">Home</span><span class="ar">الرئيسية</span></a></li>
+                    <li><a href="stadiums.html"><span class="en">Stadiums</span><span class="ar">الملاعب</span></a></li>
+                    <li><a href="matches.html"><span class="en">Matches</span><span class="ar">المباريات</span></a></li>
+                    <li><a href="tourism.html"><span class="en">Tourism</span><span class="ar">السياحة</span></a></li>
+                    <li><a href="emergency.html" class="active"><span class="en">Emergency</span><span class="ar">الطوارئ</span></a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <button id="language-toggle" data-current-lang="en">
+                    <span class="en">العربية</span>
+                    <span class="ar">English</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="emergency-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>
+                    <span class="en">Emergency Information</span>
+                    <span class="ar">معلومات الطوارئ</span>
+                </h2>
+                <p>
+                    <span class="en">Essential contacts and services for your safety during World Cup 2034</span>
+                    <span class="ar">جهات الاتصال والخدمات الأساسية لسلامتك خلال كأس العالم 2034</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="emergency-numbers" class="emergency-section">
+        <div class="container">
+            <h2>
+                <span class="en">Emergency Contact Numbers</span>
+                <span class="ar">أرقام الطوارئ</span>
+            </h2>
+            <div class="emergency-cards">
+                <div class="emergency-card">
+                    <div class="emergency-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <div class="emergency-info">
+                        <h3>
+                            <span class="en">Medical Emergency</span>
+                            <span class="ar">الطوارئ الطبية</span>
+                        </h3>
+                        <div class="phone-number">997</div>
+                        <p>
+                            <span class="en">For medical emergencies requiring immediate assistance</span>
+                            <span class="ar">للطوارئ الطبية التي تتطلب مساعدة فورية</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="emergency-card">
+                    <div class="emergency-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="emergency-info">
+                        <h3>
+                            <span class="en">Police</span>
+                            <span class="ar">الشرطة</span>
+                        </h3>
+                        <div class="phone-number">999</div>
+                        <p>
+                            <span class="en">For security emergencies, criminal incidents, and public safety</span>
+                            <span class="ar">لحالات الطوارئ الأمنية والحوادث الجنائية والسلامة العامة</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="emergency-card">
+                    <div class="emergency-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="emergency-info">
+                        <h3>
+                            <span class="en">Fire Department</span>
+                            <span class="ar">الدفاع المدني</span>
+                        </h3>
+                        <div class="phone-number">998</div>
+                        <p>
+                            <span class="en">For fires, hazardous materials, and rescue operations</span>
+                            <span class="ar">للحرائق والمواد الخطرة وعمليات الإنقاذ</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="emergency-card">
+                    <div class="emergency-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <div class="emergency-info">
+                        <h3>
+                            <span class="en">Traffic Police</span>
+                            <span class="ar">شرطة المرور</span>
+                        </h3>
+                        <div class="phone-number">993</div>
+                        <p>
+                            <span class="en">For road accidents and traffic-related emergencies</span>
+                            <span class="ar">لحوادث الطرق وحالات الطوارئ المتعلقة بالمرور</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="emergency-card">
+                    <div class="emergency-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="emergency-info">
+                        <h3>
+                            <span class="en">Unified Emergency Number</span>
+                            <span class="ar">رقم الطوارئ الموحد</span>
+                        </h3>
+                        <div class="phone-number">911</div>
+                        <p>
+                            <span class="en">For all types of emergencies (available in multiple languages)</span>
+                            <span class="ar">لجميع أنواع حالات الطوارئ (متوفر بعدة لغات)</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="emergency-card">
+                    <div class="emergency-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="emergency-info">
+                        <h3>
+                            <span class="en">Tourist Help Line</span>
+                            <span class="ar">خط مساعدة السياح</span>
+                        </h3>
+                        <div class="phone-number">930</div>
+                        <p>
+                            <span class="en">For tourist assistance, complaints, and information</span>
+                            <span class="ar">لمساعدة السياح والشكاوى والمعلومات</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="emergency-info-card" class="emergency-section">
+        <div class="container">
+            <h2>
+                <span class="en">Your Emergency Info Card</span>
+                <span class="ar">بطاقة معلومات الطوارئ الخاصة بك</span>
+            </h2>
+            <div class="info-card-container">
+                <div class="info-card">
+                    <div class="info-card-header">
+                        <span class="en">In case of emergency, show this card</span>
+                        <span class="ar">في حالة الطوارئ، أظهر هذه البطاقة</span>
+                    </div>
+                    <div class="info-card-content">
+                        <div class="info-row">
+                            <label for="emer-full-name">
+                                <span class="en">Your Name:</span>
+                                <span class="ar">اسمك الكامل:</span>
+                            </label>
+                            <input type="text" id="emer-full-name" placeholder="Type your full name">
+                        </div>
+                        <div class="info-row">
+                            <label for="emer-passport">
+                                <span class="en">Passport Number:</span>
+                                <span class="ar">رقم جواز السفر:</span>
+                            </label>
+                            <input type="text" id="emer-passport" placeholder="Type your passport number">
+                        </div>
+                        <div class="info-row">
+                            <label for="emer-nationality">
+                                <span class="en">Nationality:</span>
+                                <span class="ar">الجنسية:</span>
+                            </label>
+                            <input type="text" id="emer-nationality" placeholder="Your nationality">
+                        </div>
+                        <div class="info-row">
+                            <label for="emer-contact">
+                                <span class="en">Emergency Contact:</span>
+                                <span class="ar">جهة اتصال للطوارئ:</span>
+                            </label>
+                            <input type="text" id="emer-contact" placeholder="Name and number">
+                        </div>
+                        <div class="info-row">
+                            <label for="emer-hotel">
+                                <span class="en">Hotel/Accommodation:</span>
+                                <span class="ar">الفندق/مكان الإقامة:</span>
+                            </label>
+                            <input type="text" id="emer-hotel" placeholder="Your hotel name and address">
+                        </div>
+                        <div class="info-row">
+                            <label for="emer-medical">
+                                <span class="en">Medical Conditions:</span>
+                                <span class="ar">الحالات الطبية:</span>
+                            </label>
+                            <input type="text" id="emer-medical" placeholder="Allergies, conditions, medications">
+                        </div>
+                    </div>
+                    <div class="info-card-action">
+                        <button id="save-info-card" class="btn primary">
+                            <span class="en">Save Information</span>
+                            <span class="ar">حفظ المعلومات</span>
+                        </button>
+                        <button id="download-info-card" class="btn outline" disabled>
+                            <span class="en">Download Card</span>
+                            <span class="ar">تحميل البطاقة</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hospitals" class="emergency-section">
+        <div class="container">
+            <h2>
+                <span class="en">Hospitals & Medical Centers</span>
+                <span class="ar">المستشفيات والمراكز الطبية</span>
+            </h2>
+            <div class="content-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-city="riyadh">
+                        <span class="en">Riyadh</span>
+                        <span class="ar">الرياض</span>
+                    </button>
+                    <button class="tab-btn" data-city="jeddah">
+                        <span class="en">Jeddah</span>
+                        <span class="ar">جدة</span>
+                    </button>
+                    <button class="tab-btn" data-city="khobar">
+                        <span class="en">Khobar</span>
+                        <span class="ar">الخبر</span>
+                    </button>
+                    <button class="tab-btn" data-city="neom">
+                        <span class="en">NEOM</span>
+                        <span class="ar">نيوم</span>
+                    </button>
+                </div>
+                <div class="tabs-content">
+                    <div class="tab-panel active" data-city="riyadh">
+                        <div class="facility-list">
+                            <div class="facility-card hospital">
+                                <h3>
+                                    <span class="en">King Faisal Specialist Hospital</span>
+                                    <span class="ar">مستشفى الملك فيصل التخصصي</span>
+                                </h3>
+                                <div class="facility-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">Takhassusi St, Al Maather, Riyadh</span>
+                                        <span class="ar">شارع التخصصي، المعذر، الرياض</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+966-11-464-7272</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-language"></i>
+                                        <span class="en">Languages: Arabic, English</span>
+                                        <span class="ar">اللغات: العربية، الإنجليزية</span>
+                                    </div>
+                                </div>
+                                <div class="facility-actions">
+                                    <button class="btn small show-on-map" data-type="hospital" data-id="kfsh-riyadh">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                        <span class="en">View on Map</span>
+                                        <span class="ar">عرض على الخريطة</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="facility-card hospital">
+                                <h3>
+                                    <span class="en">King Khalid University Hospital</span>
+                                    <span class="ar">مستشفى الملك خالد الجامعي</span>
+                                </h3>
+                                <div class="facility-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">King Abdullah Rd, King Saud University, Riyadh</span>
+                                        <span class="ar">طريق الملك عبد الله، جامعة الملك سعود، الرياض</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+966-11-467-0011</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-language"></i>
+                                        <span class="en">Languages: Arabic, English</span>
+                                        <span class="ar">اللغات: العربية، الإنجليزية</span>
+                                    </div>
+                                </div>
+                                <div class="facility-actions">
+                                    <button class="btn small show-on-map" data-type="hospital" data-id="kkuh-riyadh">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                        <span class="en">View on Map</span>
+                                        <span class="ar">عرض على الخريطة</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="facility-card hospital">
+                                <h3>
+                                    <span class="en">Dr. Sulaiman Al Habib Hospital</span>
+                                    <span class="ar">مستشفى د. سليمان الحبيب</span>
+                                </h3>
+                                <div class="facility-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">Olaya St, Olaya, Riyadh</span>
+                                        <span class="ar">شارع العليا، العليا، الرياض</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+966-920-000-937</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-language"></i>
+                                        <span class="en">Languages: Arabic, English, Urdu, Filipino</span>
+                                        <span class="ar">اللغات: العربية، الإنجليزية، الأردية، الفلبينية</span>
+                                    </div>
+                                </div>
+                                <div class="facility-actions">
+                                    <button class="btn small show-on-map" data-type="hospital" data-id="habib-riyadh">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                        <span class="en">View on Map</span>
+                                        <span class="ar">عرض على الخريطة</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" data-city="jeddah">
+                        <!-- Similar hospital cards for Jeddah -->
+                        <div class="facility-list">
+                            <div class="facility-card hospital">
+                                <h3>
+                                    <span class="en">King Fahd Hospital</span>
+                                    <span class="ar">مستشفى الملك فهد</span>
+                                </h3>
+                                <div class="facility-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">Palestine St, Al Hamra, Jeddah</span>
+                                        <span class="ar">شارع فلسطين، الحمراء، جدة</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+966-12-665-6436</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-language"></i>
+                                        <span class="en">Languages: Arabic, English</span>
+                                        <span class="ar">اللغات: العربية، الإنجليزية</span>
+                                    </div>
+                                </div>
+                                <div class="facility-actions">
+                                    <button class="btn small show-on-map" data-type="hospital" data-id="fahd-jeddah">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                        <span class="en">View on Map</span>
+                                        <span class="ar">عرض على الخريطة</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" data-city="khobar">
+                        <!-- Hospital cards for Khobar -->
+                        <div class="facility-list">
+                            <div class="facility-card hospital">
+                                <h3>
+                                    <span class="en">King Fahd University Hospital</span>
+                                    <span class="ar">مستشفى الملك فهد الجامعي</span>
+                                </h3>
+                                <div class="facility-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">King Faisal Rd, Al Khobar</span>
+                                        <span class="ar">طريق الملك فيصل، الخبر</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+966-13-896-6666</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-language"></i>
+                                        <span class="en">Languages: Arabic, English</span>
+                                        <span class="ar">اللغات: العربية، الإنجليزية</span>
+                                    </div>
+                                </div>
+                                <div class="facility-actions">
+                                    <button class="btn small show-on-map" data-type="hospital" data-id="kfuh-khobar">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                        <span class="en">View on Map</span>
+                                        <span class="ar">عرض على الخريطة</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" data-city="neom">
+                        <!-- Hospital cards for NEOM -->
+                        <div class="facility-list">
+                            <div class="facility-card hospital">
+                                <h3>
+                                    <span class="en">NEOM Medical Center</span>
+                                    <span class="ar">المركز الطبي نيوم</span>
+                                </h3>
+                                <div class="facility-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">NEOM City Center</span>
+                                        <span class="ar">وسط مدينة نيوم</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+966-13-XXX-XXXX</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-language"></i>
+                                        <span class="en">Languages: Arabic, English, Multiple International Languages</span>
+                                        <span class="ar">اللغات: العربية، الإنجليزية، لغات عالمية متعددة</span>
+                                    </div>
+                                </div>
+                                <div class="facility-actions">
+                                    <button class="btn small show-on-map" data-type="hospital" data-id="medical-neom">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                        <span class="en">View on Map</span>
+                                        <span class="ar">عرض على الخريطة</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="police-stations" class="emergency-section">
+        <div class="container">
+            <h2>
+                <span class="en">Police Stations</span>
+                <span class="ar">مراكز الشرطة</span>
+            </h2>
+            <div class="content-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-city="riyadh">
+                        <span class="en">Riyadh</span>
+                        <span class="ar">الرياض</span>
+                    </button>
+                    <button class="tab-btn" data-city="jeddah">
+                        <span class="en">Jeddah</span>
+                        <span class="ar">جدة</span>
+                    </button>
+                    <button class="tab-btn" data-city="khobar">
+                        <span class="en">Khobar</span>
+                        <span class="ar">الخبر</span>
+                    </button>
+                    <button class="tab-btn" data-city="neom">
+                        <span class="en">NEOM</span>
+                        <span class="ar">نيوم</span>
+                    </button>
+                </div>
+                <div class="tabs-content">
+                    <div class="tab-panel active" data-city="riyadh">
+                        <div class="facility-list">
+                            <div class="facility-card police">
+                                <h3>
+                                    <span class="en">Al Olaya Police Station</span>
+                                    <span class="ar">مركز شرطة العليا</span>
+                                </h3>
+                                <div class="facility-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">Al Olaya St, Al Olaya, Riyadh</span>
+                                        <span class="ar">شارع العليا، العليا، الرياض</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+966-11-442-7700</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span class="en">24 Hours</span>
+                                        <span class="ar">24 ساعة</span>
+                                    </div>
+                                </div>
+                                <div class="facility-actions">
+                                    <button class="btn small show-on-map" data-type="police" data-id="olaya-police">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                        <span class="en">View on Map</span>
+                                        <span class="ar">عرض على الخريطة</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" data-city="jeddah">
+                        <!-- Police stations for Jeddah -->
+                        <div class="facility-list">
+                            <div class="facility-card police">
+                                <h3>
+                                    <span class="en">Al Hamra Police Station</span>
+                                    <span class="ar">مركز شرطة الحمراء</span>
+                                </h3>
+                                <div class="facility-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">Palestine St, Al Hamra, Jeddah</span>
+                                        <span class="ar">شارع فلسطين، الحمراء، جدة</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+966-12-668-9876</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span class="en">24 Hours</span>
+                                        <span class="ar">24 ساعة</span>
+                                    </div>
+                                </div>
+                                <div class="facility-actions">
+                                    <button class="btn small show-on-map" data-type="police" data-id="hamra-police">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                        <span class="en">View on Map</span>
+                                        <span class="ar">عرض على الخريطة</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" data-city="khobar">
+                        <!-- Police stations for Khobar -->
+                        <div class="facility-list">
+                            <div class="facility-card police">
+                                <h3>
+                                    <span class="en">Al Khobar Police Station</span>
+                                    <span class="ar">مركز شرطة الخبر</span>
+                                </h3>
+                                <div class="facility-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">King Khalid St, Al Thuqbah, Khobar</span>
+                                        <span class="ar">شارع الملك خالد، الثقبة، الخبر</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+966-13-899-3000</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span class="en">24 Hours</span>
+                                        <span class="ar">24 ساعة</span>
+                                    </div>
+                                </div>
+                                <div class="facility-actions">
+                                    <button class="btn small show-on-map" data-type="police" data-id="khobar-police">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                        <span class="en">View on Map</span>
+                                        <span class="ar">عرض على الخريطة</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-panel" data-city="neom">
+                        <!-- Police stations for NEOM -->
+                        <div class="facility-list">
+                            <div class="facility-card police">
+                                <h3>
+                                    <span class="en">NEOM Security Center</span>
+                                    <span class="ar">مركز أمن نيوم</span>
+                                </h3>
+                                <div class="facility-details">
+                                    <div class="detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span class="en">NEOM City Center</span>
+                                        <span class="ar">وسط مدينة نيوم</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+966-13-XXX-XXXX</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span class="en">24 Hours</span>
+                                        <span class="ar">24 ساعة</span>
+                                    </div>
+                                </div>
+                                <div class="facility-actions">
+                                    <button class="btn small show-on-map" data-type="police" data-id="neom-police">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                        <span class="en">View on Map</span>
+                                        <span class="ar">عرض على الخريطة</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="embassies" class="emergency-section">
+        <div class="container">
+            <h2>
+                <span class="en">Embassies & Consulates</span>
+                <span class="ar">السفارات والقنصليات</span>
+            </h2>
+            <div class="search-embassy">
+                <div class="search-container">
+                    <input type="text" id="embassy-search" placeholder="Search your country...">
+                    <button id="embassy-search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="embassy-list">
+                <div class="embassy-card">
+                    <div class="embassy-flag">
+                        <span class="flag-icon">🇺🇸</span>
+                    </div>
+                    <div class="embassy-info">
+                        <h3>
+                            <span class="en">United States Embassy</span>
+                            <span class="ar">سفارة الولايات المتحدة</span>
+                        </h3>
+                        <div class="embassy-details">
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="en">Abdullah Ibn Huthafah Al-Sahmi St, Diplomatic Quarter, Riyadh</span>
+                                <span class="ar">شارع عبدالله بن حذافة السهمي، الحي الدبلوماسي، الرياض</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+966-11-488-3800</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>RiyadhACS@state.gov</span>
+                            </div>
+                        </div>
+                        <div class="embassy-actions">
+                            <button class="btn small show-on-map" data-type="embassy" data-id="us-embassy">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span class="en">View on Map</span>
+                                <span class="ar">عرض على الخريطة</span>
+                            </button>
+                            <a href="https://sa.usembassy.gov" target="_blank" class="btn small outline">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span class="en">Official Website</span>
+                                <span class="ar">الموقع الرسمي</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="embassy-card">
+                    <div class="embassy-flag">
+                        <span class="flag-icon">🇬🇧</span>
+                    </div>
+                    <div class="embassy-info">
+                        <h3>
+                            <span class="en">British Embassy</span>
+                            <span class="ar">السفارة البريطانية</span>
+                        </h3>
+                        <div class="embassy-details">
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="en">Abdullah Ibn Huthafah Al-Sahmi St, Diplomatic Quarter, Riyadh</span>
+                                <span class="ar">شارع عبدالله بن حذافة السهمي، الحي الدبلوماسي، الرياض</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+966-11-481-9100</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>ukininformation.riyadh@fco.gov.uk</span>
+                            </div>
+                        </div>
+                        <div class="embassy-actions">
+                            <button class="btn small show-on-map" data-type="embassy" data-id="uk-embassy">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span class="en">View on Map</span>
+                                <span class="ar">عرض على الخريطة</span>
+                            </button>
+                            <a href="https://www.gov.uk/world/saudi-arabia" target="_blank" class="btn small outline">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span class="en">Official Website</span>
+                                <span class="ar">الموقع الرسمي</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More embassy cards would be added dynamically -->
+            </div>
+            <div class="view-more-embassies">
+                <button id="load-more-embassies" class="btn outline">
+                    <span class="en">Load More Embassies</span>
+                    <span class="ar">تحميل المزيد من السفارات</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="travel-advisory" class="emergency-section">
+        <div class="container">
+            <h2>
+                <span class="en">Travel Tips & Guidelines</span>
+                <span class="ar">نصائح وإرشادات السفر</span>
+            </h2>
+            <div class="advisory-grid">
+                <div class="advisory-card">
+                    <div class="advisory-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <div class="advisory-content">
+                        <h3>
+                            <span class="en">Identification</span>
+                            <span class="ar">الهوية</span>
+                        </h3>
+                        <p>
+                            <span class="en">Always carry your passport or a copy of your passport and visa. The Hayya Card (Fan ID) will be required for stadium access.</span>
+                            <span class="ar">احمل دائمًا جواز سفرك أو نسخة من جواز سفرك والتأشيرة. ستكون بطاقة هيّا (بطاقة المشجع) مطلوبة للدخول إلى الملعب.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="advisory-card">
+                    <div class="advisory-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <div class="advisory-content">
+                        <h3>
+                            <span class="en">Dress Code</span>
+                            <span class="ar">قواعد اللباس</span>
+                        </h3>
+                        <p>
+                            <span class="en">Dress modestly in public places. For men: shoulders and knees should be covered. For women: shoulders, knees, and midriff should be covered.</span>
+                            <span class="ar">ارتدِ ملابس محتشمة في الأماكن العامة. للرجال: يجب تغطية الكتفين والركبتين. للنساء: يجب تغطية الكتفين والركبتين والخصر.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="advisory-card">
+                    <div class="advisory-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <div class="advisory-content">
+                        <h3>
+                            <span class="en">Alcohol & Substances</span>
+                            <span class="ar">الكحول والمواد المحظورة</span>
+                        </h3>
+                        <p>
+                            <span class="en">Alcohol and illegal drugs are strictly prohibited. Penalties for possession or use are severe.</span>
+                            <span class="ar">الكحول والمخدرات غير القانونية محظورة تمامًا. العقوبات على الحيازة أو الاستخدام شديدة.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="advisory-card">
+                    <div class="advisory-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="advisory-content">
+                        <h3>
+                            <span class="en">Public Behavior</span>
+                            <span class="ar">السلوك العام</span>
+                        </h3>
+                        <p>
+                            <span class="en">Public displays of affection should be avoided. Respect local customs and traditions, especially during prayer times.</span>
+                            <span class="ar">يجب تجنب إظهار المودة في الأماكن العامة. احترم العادات والتقاليد المحلية، خاصة خلال أوقات الصلاة.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="advisory-card">
+                    <div class="advisory-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="advisory-content">
+                        <h3>
+                            <span class="en">Photography</span>
+                            <span class="ar">التصوير</span>
+                        </h3>
+                        <p>
+                            <span class="en">Avoid photographing government buildings, military installations, and local residents without permission.</span>
+                            <span class="ar">تجنب تصوير المباني الحكومية والمنشآت العسكرية والسكان المحليين دون إذن.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="advisory-card">
+                    <div class="advisory-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <div class="advisory-content">
+                        <h3>
+                            <span class="en">Internet & Social Media</span>
+                            <span class="ar">الإنترنت ووسائل التواصل الاجتماعي</span>
+                        </h3>
+                        <p>
+                            <span class="en">Be mindful of local laws when posting on social media. Content that criticizes the government or religious figures may lead to legal consequences.</span>
+                            <span class="ar">انتبه للقوانين المحلية عند النشر على وسائل التواصل الاجتماعي. قد يؤدي المحتوى الذي ينتقد الحكومة أو الشخصيات الدينية إلى عواقب قانونية.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="emergency-map" class="full-width">
+        <div class="container">
+            <h2>
+                <span class="en">Emergency Services Map</span>
+                <span class="ar">خريطة خدمات الطوارئ</span>
+            </h2>
+            <div id="emergency-services-map"></div>
+            <div class="map-legend">
+                <div class="legend-item">
+                    <div class="legend-marker hospital"></div>
+                    <span class="en">Hospitals</span>
+                    <span class="ar">المستشفيات</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-marker police"></div>
+                    <span class="en">Police Stations</span>
+                    <span class="ar">مراكز الشرطة</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-marker embassy"></div>
+                    <span class="en">Embassies</span>
+                    <span class="ar">السفارات</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-marker stadium"></div>
+                    <span class="en">Stadiums</span>
+                    <span class="ar">الملاعب</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg viewBox="0 0 100 100" class="footer-logo-svg">
+                        <circle cx="50" cy="50" r="45" fill="#006c35"/>
+                        <polygon points="50,20 60,40 85,40 65,55 75,80 50,65 25,80 35,55 15,40 40,40" fill="#fff"/>
+                    </svg>
+                    <h3>
+                        <span class="en">World Cup 2034 Saudi Arabia</span>
+                        <span class="ar">كأس العالم 2034 المملكة العربية السعودية</span>
+                    </h3>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Guide</span>
+                            <span class="ar">الدليل</span>
+                        </h4>
+                        <ul>
+                            <li><a href="index.html">
+                                <span class="en">Home</span>
+                                <span class="ar">الرئيسية</span>
+                            </a></li>
+                            <li><a href="stadiums.html">
+                                <span class="en">Stadiums</span>
+                                <span class="ar">الملاعب</span>
+                            </a></li>
+                            <li><a href="matches.html">
+                                <span class="en">Matches</span>
+                                <span class="ar">المباريات</span>
+                            </a></li>
+                            <li><a href="tourism.html">
+                                <span class="en">Tourism</span>
+                                <span class="ar">السياحة</span>
+                            </a></li>
+                            <li><a href="emergency.html">
+                                <span class="en">Emergency</span>
+                                <span class="ar">الطوارئ</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Cities</span>
+                            <span class="ar">المدن</span>
+                        </h4>
+                        <ul>
+                            <li><a href="tourism.html#riyadh">
+                                <span class="en">Riyadh</span>
+                                <span class="ar">الرياض</span>
+                            </a></li>
+                            <li><a href="tourism.html#jeddah">
+                                <span class="en">Jeddah</span>
+                                <span class="ar">جدة</span>
+                            </a></li>
+                            <li><a href="tourism.html#khobar">
+                                <span class="en">Khobar</span>
+                                <span class="ar">الخبر</span>
+                            </a></li>
+                            <li><a href="tourism.html#neom">
+                                <span class="en">NEOM</span>
+                                <span class="ar">نيوم</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Emergency</span>
+                            <span class="ar">الطوارئ</span>
+                        </h4>
+                        <ul>
+                            <li><a href="emergency.html#emergency-numbers">
+                                <span class="en">Emergency Numbers</span>
+                                <span class="ar">أرقام الطوارئ</span>
+                            </a></li>
+                            <li><a href="emergency.html#hospitals">
+                                <span class="en">Hospitals</span>
+                                <span class="ar">المستشفيات</span>
+                            </a></li>
+                            <li><a href="emergency.html#police-stations">
+                                <span class="en">Police Stations</span>
+                                <span class="ar">مراكز الشرطة</span>
+                            </a></li>
+                            <li><a href="emergency.html#embassies">
+                                <span class="en">Embassies</span>
+                                <span class="ar">السفارات</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>
+                        <span class="en">&copy; 2025 World Cup 2034 Saudi Arabia Guide | All Rights Reserved</span>
+                        <span class="ar">© 2025 دليل كأس العالم 2034 المملكة العربية السعودية | جميع الحقوق محفوظة</span>
+                    </p>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="emergency-info.js"></script>
+    <script src="language.js"></script>
+    <script src="emergency.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>

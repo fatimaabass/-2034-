@@ -1,0 +1,483 @@
+/* Responsive CSS for World Cup 2034 Saudi Arabia Guide */
+
+/* 
+ * Breakpoints:
+ * - Small: 576px and below
+ * - Medium: 577px to 768px
+ * - Large: 769px to 992px
+ * - Extra Large: 993px to 1200px
+ * - Extra Extra Large: 1201px and above
+ */
+
+/* ==========================================
+   Extra Small Devices (< 576px)
+   ========================================== */
+@media screen and (max-width: 575px) {
+    /* Base Typography */
+    html {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Header & Navigation */
+    #main-header .container {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        margin-bottom: var(--spacing-sm);
+        width: 100%;
+        justify-content: center;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    #main-nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--white-color);
+        box-shadow: var(--shadow-md);
+        padding: var(--spacing-md);
+        display: none;
+    }
+
+    #main-nav.open ul {
+        display: flex;
+    }
+
+    #main-nav li {
+        margin: var(--spacing-xs) 0;
+    }
+
+    .language-selector {
+        margin-left: auto;
+    }
+
+    /* Hero Sections */
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    /* Cards & Grids */
+    .stadium-cards, .quick-access-grid, .cuisine-grid, .attractions-grid, .emergency-cards, .advisory-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .match-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .match-teams {
+        order: 1;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .match-time {
+        order: 2;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .match-details {
+        order: 3;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .match-actions {
+        order: 4;
+        justify-content: center;
+    }
+
+    /* City & Tourism */
+    .city-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .city-image {
+        height: 200px;
+    }
+
+    .city-tabs {
+        flex-wrap: wrap;
+    }
+
+    .city-tab {
+        flex: 1;
+        min-width: 45%;
+        margin-bottom: var(--spacing-xs);
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .copyright {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Countdown */
+    .countdown-timer {
+        flex-wrap: wrap;
+    }
+
+    .time-unit {
+        min-width: 70px;
+        flex: 1;
+    }
+
+    /* Maps */
+    #preview-map, #stadiums-map, #tourism-map, #emergency-services-map {
+        height: 300px;
+    }
+
+    /* Tabs & Filters */
+    .tabs-header {
+        flex-wrap: wrap;
+    }
+
+    .tab-btn {
+        flex: 1;
+        min-width: 45%;
+        text-align: center;
+    }
+
+    .filter-options {
+        flex-direction: column;
+    }
+
+    /* Emergency & Embassy */
+    .emergency-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .emergency-icon {
+        margin: 0 auto var(--spacing-md);
+    }
+
+    .embassy-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .embassy-flag {
+        margin: 0 auto var(--spacing-md);
+    }
+
+    .embassy-actions {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    /* Advisory Cards */
+    .advisory-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .advisory-icon {
+        margin: 0 auto var(--spacing-md);
+    }
+
+    /* Tool Wrappers */
+    .tools-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .notification-controls {
+        flex-direction: column;
+    }
+}
+
+/* ==========================================
+   Small Devices (576px - 767px)
+   ========================================== */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    /* Base Typography */
+    html {
+        font-size: 15px;
+    }
+
+    /* Header & Navigation */
+    #menu-toggle {
+        display: block;
+    }
+
+    #main-nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--white-color);
+        box-shadow: var(--shadow-md);
+        padding: var(--spacing-md);
+        display: none;
+    }
+
+    #main-nav.open ul {
+        display: flex;
+    }
+
+    #main-nav li {
+        margin: var(--spacing-xs) 0;
+    }
+
+    /* Cards & Grids */
+    .stadium-cards, .cuisine-grid, .emergency-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .match-card {
+        grid-template-columns: auto 1fr;
+    }
+
+    .match-teams {
+        grid-column: 1 / 3;
+        order: 1;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .match-time {
+        order: 2;
+    }
+
+    .match-details {
+        order: 3;
+    }
+
+    .match-actions {
+        grid-column: 1 / 3;
+        order: 4;
+        justify-content: center;
+    }
+
+    /* City & Tourism */
+    .city-intro {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Tool Wrappers */
+    .tools-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   Medium Devices (768px - 991px)
+   ========================================== */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    /* Header & Navigation */
+    #menu-toggle {
+        display: block;
+    }
+
+    #main-nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--white-color);
+        box-shadow: var(--shadow-md);
+        padding: var(--spacing-md);
+        display: none;
+    }
+
+    #main-nav.open ul {
+        display: flex;
+    }
+
+    #main-nav li {
+        margin: var(--spacing-xs) 0;
+    }
+
+    /* Cards & Grids */
+    .stadium-cards, .cuisine-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* City & Tourism */
+    .city-intro {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ==========================================
+   Large Devices (992px - 1199px)
+   ========================================== */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    /* Cards & Grids */
+    .stadium-cards, .cuisine-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* City & Tourism */
+    .city-intro {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==========================================
+   Extra Large Devices (1200px and up)
+   ========================================== */
+@media screen and (min-width: 1200px) {
+    /* Base Typography */
+    html {
+        font-size: 17px;
+    }
+
+    /* Cards & Grids */
+    .stadium-cards, .cuisine-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* City & Tourism */
+    .city-intro {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==========================================
+   Right-to-Left (RTL) Specific Adjustments
+   ========================================== */
+@media screen and (max-width: 767px) {
+    .rtl #main-nav ul {
+        right: 0;
+        left: 0;
+    }
+}
+
+/* ==========================================
+   Print Styles
+   ========================================== */
+@media print {
+    /* Hide unnecessary elements */
+    header, footer, #map-preview, #stadiums-map, #tourism-map, #emergency-services-map,
+    .hero-buttons, .city-tabs, .tabs-header, .filter-options, .social-links, .map-overlay,
+    .search-and-filter, .notification-preference, .embassy-actions, .facility-actions {
+        display: none !important;
+    }
+
+    /* Adjust layout for printing */
+    body {
+        font-size: 12pt;
+        color: #000;
+        background-color: #fff;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 1cm;
+    }
+
+    /* Ensure elements break properly */
+    .match-card, .stadium-card, .attraction-card, .emergency-card, .embassy-card, .facility-card {
+        break-inside: avoid;
+        margin-bottom: 1cm;
+    }
+
+    /* Simplify borders and backgrounds */
+    .stadium-card, .match-card, .attraction-card, .emergency-card, .embassy-card, .facility-card,
+    .cuisine-item, .info-card, .advisory-card, .dining-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    /* Force backgrounds to print */
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Expand all hidden panels */
+    .tab-panel, .city-panel {
+        display: block !important;
+    }
+
+    /* Add headers for sections */
+    section {
+        margin-bottom: 2cm;
+        position: relative;
+    }
+
+    section::before {
+        content: attr(id);
+        display: block;
+        font-weight: bold;
+        font-size: 14pt;
+        margin-bottom: 0.5cm;
+        text-transform: uppercase;
+    }
+
+    /* Add page breaks before major sections */
+    #stadiums-list, #match-schedule, #city-content, #hospitals, #embassies {
+        page-break-before: always;
+    }
+
+    /* Expand URLs */
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 90%;
+        color: #555;
+    }
+
+    /* Don't show URL for navigation */
+    nav a[href]::after {
+        content: "";
+    }
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stadiums - World Cup 2034 Saudi Arabia Guide</title>
+    <meta name="description" content="Explore all the stadiums hosting World Cup 2034 matches in Saudi Arabia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="rtl.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-image">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <circle cx="50" cy="50" r="45" fill="#006c35"/>
+                        <polygon points="50,20 60,40 85,40 65,55 75,80 50,65 25,80 35,55 15,40 40,40" fill="#fff"/>
+                    </svg>
+                </div>
+                <h1><span class="title-ar" lang="ar">دليل كأس العالم 2034</span><span class="title-en">World Cup 2034 Guide</span></h1>
+            </div>
+            <nav id="main-nav">
+                <button id="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul>
+                    <li><a href="index.html"><span class="en">Home</span><span class="ar">الرئيسية</span></a></li>
+                    <li><a href="stadiums.html" class="active"><span class="en">Stadiums</span><span class="ar">الملاعب</span></a></li>
+                    <li><a href="matches.html"><span class="en">Matches</span><span class="ar">المباريات</span></a></li>
+                    <li><a href="tourism.html"><span class="en">Tourism</span><span class="ar">السياحة</span></a></li>
+                    <li><a href="emergency.html"><span class="en">Emergency</span><span class="ar">الطوارئ</span></a></li>
+                </ul>
+            </nav>
+            <div class="language-selector">
+                <button id="language-toggle" data-current-lang="en">
+                    <span class="en">العربية</span>
+                    <span class="ar">English</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="stadiums-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>
+                    <span class="en">World Cup 2034 Stadiums</span>
+                    <span class="ar">ملاعب كأس العالم 2034</span>
+                </h2>
+                <p>
+                    <span class="en">Explore all 10 state-of-the-art stadiums that will host the World Cup 2034 matches across Saudi Arabia</span>
+                    <span class="ar">استكشف جميع الملاعب العشرة الحديثة التي ستستضيف مباريات كأس العالم 2034 في جميع أنحاء المملكة العربية السعودية</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="stadiums-filter">
+        <div class="container">
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="city-filter">
+                        <span class="en">Filter by City:</span>
+                        <span class="ar">تصفية حسب المدينة:</span>
+                    </label>
+                    <select id="city-filter">
+                        <option value="all">
+                            <span class="en">All Cities</span>
+                            <span class="ar">كل المدن</span>
+                        </option>
+                        <option value="riyadh">
+                            <span class="en">Riyadh</span>
+                            <span class="ar">الرياض</span>
+                        </option>
+                        <option value="jeddah">
+                            <span class="en">Jeddah</span>
+                            <span class="ar">جدة</span>
+                        </option>
+                        <option value="khobar">
+                            <span class="en">Khobar</span>
+                            <span class="ar">الخبر</span>
+                        </option>
+                        <option value="neom">
+                            <span class="en">NEOM</span>
+                            <span class="ar">نيوم</span>
+                        </option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="capacity-filter">
+                        <span class="en">Filter by Capacity:</span>
+                        <span class="ar">تصفية حسب السعة:</span>
+                    </label>
+                    <select id="capacity-filter">
+                        <option value="all">
+                            <span class="en">All Capacities</span>
+                            <span class="ar">كل السعات</span>
+                        </option>
+                        <option value="50000-plus">
+                            <span class="en">50,000+</span>
+                            <span class="ar">+50,000</span>
+                        </option>
+                        <option value="70000-plus">
+                            <span class="en">70,000+</span>
+                            <span class="ar">+70,000</span>
+                        </option>
+                        <option value="90000-plus">
+                            <span class="en">90,000+</span>
+                            <span class="ar">+90,000</span>
+                        </option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="matches-filter">
+                        <span class="en">Filter by Matches:</span>
+                        <span class="ar">تصفية حسب المباريات:</span>
+                    </label>
+                    <select id="matches-filter">
+                        <option value="all">
+                            <span class="en">All Matches</span>
+                            <span class="ar">كل المباريات</span>
+                        </option>
+                        <option value="group">
+                            <span class="en">Group Stage</span>
+                            <span class="ar">دور المجموعات</span>
+                        </option>
+                        <option value="round-16">
+                            <span class="en">Round of 16</span>
+                            <span class="ar">دور الـ16</span>
+                        </option>
+                        <option value="quarterfinal">
+                            <span class="en">Quarter Finals</span>
+                            <span class="ar">ربع النهائي</span>
+                        </option>
+                        <option value="semifinal">
+                            <span class="en">Semi Finals</span>
+                            <span class="ar">نصف النهائي</span>
+                        </option>
+                        <option value="final">
+                            <span class="en">Final</span>
+                            <span class="ar">النهائي</span>
+                        </option>
+                    </select>
+                </div>
+                <button id="reset-filters" class="btn small">
+                    <span class="en">Reset Filters</span>
+                    <span class="ar">إعادة ضبط الفلاتر</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="map" class="full-width">
+        <div class="container">
+            <h2>
+                <span class="en">Interactive Stadium Map</span>
+                <span class="ar">خريطة الملاعب التفاعلية</span>
+            </h2>
+            <div id="stadiums-map"></div>
+            <div class="map-legend">
+                <div class="legend-item">
+                    <div class="legend-marker final"></div>
+                    <span class="en">Final Stadium</span>
+                    <span class="ar">ملعب المباراة النهائية</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-marker semifinal"></div>
+                    <span class="en">Semi-Final Stadium</span>
+                    <span class="ar">ملاعب نصف النهائي</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-marker other"></div>
+                    <span class="en">Other Stadiums</span>
+                    <span class="ar">الملاعب الأخرى</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stadiums-list">
+        <div class="container">
+            <h2>
+                <span class="en">All Stadiums</span>
+                <span class="ar">جميع الملاعب</span>
+            </h2>
+            <div id="stadiums-grid" class="stadiums-grid">
+                <!-- Stadium entries will be loaded from JavaScript -->
+                <div class="stadium-card" id="king-salman" data-city="riyadh" data-capacity="92000" data-matches="group,round-16,quarterfinal,semifinal,final">
+                    <div class="stadium-image">
+                        <img src="King Salman International Stadium.jpg" alt="King Salman International Stadium">
+                        <div class="match-badge final">
+                            <span class="en">Final</span>
+                            <span class="ar">النهائي</span>
+                        </div>
+                    </div>
+                    <div class="stadium-info">
+                        <h3>
+                            <span class="en">King Salman International Stadium</span>
+                            <span class="ar">استاد الملك سلمان الدولي</span>
+                        </h3>
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="en">Location:</span>
+                                <span class="ar">الموقع:</span>
+                            </div>
+                            <div class="info-value">
+                                <span class="en">Riyadh</span>
+                                <span class="ar">الرياض</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-users"></i>
+                                <span class="en">Capacity:</span>
+                                <span class="ar">السعة:</span>
+                            </div>
+                            <div class="info-value">
+                                <span class="en">92,000+</span>
+                                <span class="ar">+92,000</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-trophy"></i>
+                                <span class="en">Matches:</span>
+                                <span class="ar">المباريات:</span>
+                            </div>
+                            <div class="info-value">
+                                <span class="en">Opening, Group Stage, Round of 32, Round of 16, Quarter-Final, Semi-Final, Final</span>
+                                <span class="ar">الافتتاح، دور المجموعات، دور الـ32، دور الـ16، ربع النهائي، نصف النهائي، النهائي</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-info-circle"></i>
+                                <span class="en">Features:</span>
+                                <span class="ar">المميزات:</span>
+                            </div>
+                            <div class="info-value">
+                                <span class="en">Part of the "Green Riyadh" project, largest stadium in the kingdom</span>
+                                <span class="ar">جزء من مشروع "الرياض الخضراء"، أكبر ملعب في المملكة</span>
+                            </div>
+                        </div>
+                        <button class="btn stadium-details">
+                            <span class="en">View Details</span>
+                            <span class="ar">عرض التفاصيل</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="stadium-card" id="prince-mohammed" data-city="qiddiya" data-capacity="46000" data-matches="group,round-16,third-place">
+                    <div class="stadium-image">
+                        <img src="Prince Mohammed bin Salman Stadium.jpg" alt="Prince Mohammed bin Salman Stadium">
+                    </div>
+                    <div class="stadium-info">
+                        <h3>
+                            <span class="en">Prince Mohammed bin Salman Stadium</span>
+                            <span class="ar">استاد الأمير محمد بن سلمان</span>
+                        </h3>
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="en">Location:</span>
+                                <span class="ar">الموقع:</span>
+                            </div>
+                            <div class="info-value">
+                                <span class="en">Qiddiya</span>
+                                <span class="ar">القدية</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-users"></i>
+                                <span class="en">Capacity:</span>
+                                <span class="ar">السعة:</span>
+                            </div>
+                            <div class="info-value">
+                                <span class="en">46,000+</span>
+                                <span class="ar">+46,000</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-trophy"></i>
+                                <span class="en">Matches:</span>
+                                <span class="ar">المباريات:</span>
+                            </div>
+                            <div class="info-value">
+                                <span class="en">Group Stage, Round of 32, Round of 16, Third Place Match</span>
+                                <span class="ar">دور المجموعات، دور الـ32، دور الـ16، مباراة تحديد المركز الثالث</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">
+                                <i class="fas fa-info-circle"></i>
+                                <span class="en">Features:</span>
+                                <span class="ar">المميزات:</span>
+                            </div>
+                            <div class="info-value">
+                                <span class="en">Located at the top of Tuwaiq Mountain, design allows for retractable roof, floor, and walls</span>
+                                <span class="ar">يقع على قمة جبل طويق، تصميم يسمح بسحب السقف والأرضية والجدران</span>
+                            </div>
+                        </div>
+                        <button class="btn stadium-details">
+                            <span class="en">View Details</span>
+                            <span class="ar">عرض التفاصيل</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Remaining stadiums would be populated here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="stadium-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="stadium-detail-content">
+                <!-- Modal content will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg viewBox="0 0 100 100" class="footer-logo-svg">
+                        <circle cx="50" cy="50" r="45" fill="#006c35"/>
+                        <polygon points="50,20 60,40 85,40 65,55 75,80 50,65 25,80 35,55 15,40 40,40" fill="#fff"/>
+                    </svg>
+                    <h3>
+                        <span class="en">World Cup 2034 Saudi Arabia</span>
+                        <span class="ar">كأس العالم 2034 المملكة العربية السعودية</span>
+                    </h3>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Guide</span>
+                            <span class="ar">الدليل</span>
+                        </h4>
+                        <ul>
+                            <li><a href="index.html">
+                                <span class="en">Home</span>
+                                <span class="ar">الرئيسية</span>
+                            </a></li>
+                            <li><a href="stadiums.html">
+                                <span class="en">Stadiums</span>
+                                <span class="ar">الملاعب</span>
+                            </a></li>
+                            <li><a href="matches.html">
+                                <span class="en">Matches</span>
+                                <span class="ar">المباريات</span>
+                            </a></li>
+                            <li><a href="tourism.html">
+                                <span class="en">Tourism</span>
+                                <span class="ar">السياحة</span>
+                            </a></li>
+                            <li><a href="emergency.html">
+                                <span class="en">Emergency</span>
+                                <span class="ar">الطوارئ</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Cities</span>
+                            <span class="ar">المدن</span>
+                        </h4>
+                        <ul>
+                            <li><a href="tourism.html#riyadh">
+                                <span class="en">Riyadh</span>
+                                <span class="ar">الرياض</span>
+                            </a></li>
+                            <li><a href="tourism.html#jeddah">
+                                <span class="en">Jeddah</span>
+                                <span class="ar">جدة</span>
+                            </a></li>
+                            <li><a href="tourism.html#khobar">
+                                <span class="en">Khobar</span>
+                                <span class="ar">الخبر</span>
+                            </a></li>
+                            <li><a href="tourism.html#neom">
+                                <span class="en">NEOM</span>
+                                <span class="ar">نيوم</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>
+                            <span class="en">Emergency</span>
+                            <span class="ar">الطوارئ</span>
+                        </h4>
+                        <ul>
+                            <li><a href="emergency.html#emergency-numbers">
+                                <span class="en">Emergency Numbers</span>
+                                <span class="ar">أرقام الطوارئ</span>
+                            </a></li>
+                            <li><a href="emergency.html#hospitals">
+                                <span class="en">Hospitals</span>
+                                <span class="ar">المستشفيات</span>
+                            </a></li>
+                            <li><a href="emergency.html#police-stations">
+                                <span class="en">Police Stations</span>
+                                <span class="ar">مراكز الشرطة</span>
+                            </a></li>
+                            <li><a href="emergency.html#embassies">
+                                <span class="en">Embassies</span>
+                                <span class="ar">السفارات</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>
+                        <span class="en">&copy; 2025 World Cup 2034 Saudi Arabia Guide | All Rights Reserved</span>
+                        <span class="ar">© 2025 دليل كأس العالم 2034 المملكة العربية السعودية | جميع الحقوق محفوظة</span>
+                    </p>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="stadiums-info.js"></script>
+    <script src="language.js"></script>
+    <script src="stadiums.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>
